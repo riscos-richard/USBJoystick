@@ -1,0 +1,225 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stddef.h>
+#include <ctype.h>
+
+#include "swis.h"
+#include "kernel.h"
+
+
+#include "debugrep.h"
+
+
+#include "oslib/os.h"
+#include "oslib/devicefs.h"
+
+#include "usb.h"
+#include "usbservice.h"
+
+
+
+#define \
+  usb_control(device, bmRequestType, bRequest, wValue,wIndex,wLength,dataout)\
+     _swix(DeviceFS_CallDevice,_INR(0,6),(1u<<31),(device),0,((bmRequestType) | ((bRequest)<<8) | ((wValue)<<16)),\
+                                                                 ((wIndex) | ((wLength)<<16)),(dataout),0)
+
+
+
+_kernel_oserror* usb_get_device_handle(const usb_device_t* device, os_fw fs_handle, buffer_b* buffer_handle, unsigned int *devfs_handle)
+{
+  // in
+  // r0: (1u<<31)+3   return buffer handle and devicefs stream handle
+  // r1: device name (e.g. usbd)
+  // r2: fileswitch stream handle
+  //
+  // out
+  // r3: buffer handle
+  // r4: devicefs stream handle
+
+  return _swix(DeviceFS_CallDevice, _INR(0,2) | _OUTR(3,4),
+               (1u<<31)+3,
+               (device),
+               fs_handle,
+               buffer_handle,
+               devfs_handle);
+}
+
+
+
+_kernel_oserror* usb_scan_devices(usb_scan_devices_fn* fn, void* handle)
+{
+  usb_service_list_t* next = NULL;
+
+  _kernel_oserror* e = _swix(OS_ServiceCall, _INR(0,2)|_OUT(2),
+                             Service_USBDriver_Connected,
+                             Service_USBDriver,
+                             0,
+                             &next);
+  while (next)
+  {
+    const usb_service_list_t* current = next;
+    next = next->next;
+
+    if (!e) e = fn(&current->device, handle);
+    _swix(OS_Module, _IN(0)|_IN(2), 7, current);
+  }
+
+  return e;
+}
+
+
+
+
+
+usb_descriptor_t* usb_get_descriptor_list(const usb_service_t* device)
+{
+  return (usb_descriptor_t*)(((int)device)+device->descriptors_offset);
+}
+
+
+
+
+usb_string_descriptor_t* usb_get_device_string_descriptor(const usb_device_t* device, int index)
+{
+  debug_printf("usb_get_device_string_descriptor: device='%s', string index=%u\n", device, index);
+
+  if (index < 1 || index >= 0x100)
+    return 0;
+
+  _kernel_oserror* e;
+
+  uint16_t wValue = (UDESC_STRING << 8) + (0);         // final number is stringIndex
+  uint16_t wIndex = USB_LANGUAGE_TABLE;
+  uint16_t wLength = sizeof(usb_string_descriptor_t);
+  char lang[USB_MAX_STRING_LEN];
+
+  debug_printf("usb_get_device_string descriptor: Getting language: device='%s' wValue=0x%x, wIndex=%u, wLength=%u\n", device, wValue, wIndex, wLength);
+  e = usb_control(device, UT_READ_DEVICE, UR_GET_DESCRIPTOR, wValue, wIndex, wLength, lang);
+  if (e) {
+    debug_printf("error getting usb string language: %s\n", e->errmess);
+    return 0;
+  }
+
+  wValue = (UDESC_STRING << 8) + (index);         // final number is desired stringIndex
+  wIndex = lang[0];
+  wLength = 2;            // we just want the size for now
+  usb_string_descriptor_t *str = calloc(1, sizeof(usb_string_descriptor_t));
+  if (str == NULL)
+  {
+    debug_printf("Cannot allocate memory for string descriptor!\n");
+    return 0;
+  }
+
+  debug_printf("usb_get_device_string descriptor: Language is %u\n", lang[0]);
+
+  debug_printf("usb_get_device_string descriptor: getting size: device='%s' wValue=0x%x, wIndex=%u, wLength=%u\n", device, wValue, wIndex, wLength);
+  e = usb_control(device, UT_READ_DEVICE, UR_GET_DESCRIPTOR, wValue, wIndex, wLength, str);
+  if (e) {
+    debug_printf("error getting usb string size: %s\n", e->errmess);
+    return 0;
+  }
+
+  debug_printf("usb_get_device_string descriptor: StringSize is %u\n", str->bLength);
+
+  if (str->bLength == 0)
+    return 0;
+
+  wLength = str->bLength;
+
+  debug_printf("usb_get_device_string descriptor: getting string: device='%s' wValue=0x%x, wIndex=%u, wLength=%u\n", device, wValue, wIndex, wLength);
+  e = usb_control(device, UT_READ_DEVICE, UR_GET_DESCRIPTOR, wValue, wIndex, wLength, str);
+  if (e) {
+    debug_printf("error getting usb string: %s\n", e->errmess);
+    return 0;
+  }
+
+  return str;
+}
+
+
+
+
+
+_kernel_oserror* usb_get_descriptor(const usb_device_t* dev, uint8_t type, uint16_t length, uint8_t* buf)
+{
+  uint16_t wValue = (type << 8);
+  uint16_t wIndex = 0;
+  uint16_t wLength = length;
+
+  debug_printf("usb_get_descriptor: dev='%s' wValue=0x%x, wIndex=%u, wLength=%u\n", dev, wValue, wIndex, wLength);
+
+  _kernel_oserror* e = usb_control(dev, UT_READ_INTERFACE, UR_GET_DESCRIPTOR, wValue, wIndex, wLength, buf);
+
+  return e;
+}
+
+
+
+
+
+
+_kernel_oserror* usb_hid_set_output_report(const usb_device_t* dev, uint8_t interface, uint8_t* buf, uint16_t length)
+{
+  uint16_t wValue = (UHID_OUTPUT_REPORT << 8);
+  uint16_t wIndex = interface;
+  uint16_t wLength = length;
+
+  debug_printf("usb_hid_set_output_report: dev='%s' wValue=0x%x, wIndex=%u, wLength=%u\n", dev, wValue, wIndex, wLength);
+
+  _kernel_oserror* e = usb_control(dev, UT_WRITE_CLASS_INTERFACE, UR_SET_REPORT, wValue, wIndex, wLength, buf);
+
+  return e;
+}
+
+
+
+
+
+unsigned int usb_get_hid_u_value(uint8_t* buf)
+{
+    uint8_t size = *buf & 3;
+    buf++;
+    switch (size)
+    {
+        case 1: return *buf;
+        case 2: return buf[0] + (buf[1] << 8);
+        case 3: return buf[0] + (buf[1] << 8) + (buf[2] << 16) + (buf[3] << 24);
+    }
+    return 0;  
+}
+
+
+
+
+
+int usb_get_hid_s_value(uint8_t* buf)
+{
+    uint8_t size = *buf & 3;
+    buf++;
+    switch (size)
+    {
+        case 1: return (*buf << 24) >> 24;
+        case 2: return ((buf[0] + (buf[1] << 8)) << 16) >> 16;
+        case 3: return buf[0] + (buf[1] << 8) + (buf[2] << 16) + (buf[3] << 24);
+    }
+    return 0;  
+}
+
+
+
+
+
+int usb_string_descriptor_to_ascii(const usb_string_descriptor_t *str, char *buffer)
+{
+  int len = 0;
+  if (str) {
+    for (len=0; len < ((str->bLength-2)/2); len+=1) {
+      char c = str->bString[len];
+      if (isprint(c))
+        buffer[len] = c;
+    }
+  }
+  return len;
+}

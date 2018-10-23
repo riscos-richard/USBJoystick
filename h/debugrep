@@ -1,0 +1,7 @@
+#ifndef DEBUG_REPORTER_H_INCLUDED
+#define DEBUG_REPORTER_H_INCLUDED
+
+int debug_printf(char *cntrl_string, ...);
+
+#endif
+

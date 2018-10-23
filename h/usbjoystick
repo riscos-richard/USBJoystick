@@ -1,0 +1,338 @@
+#ifndef USBJOYSTICK_H_INCLUDED
+#define USBJOYSTICK_H_INCLUDED
+
+
+#include "usb.h"
+#include "usbhid.h"
+#include "usbrdesc.h"
+
+
+// this is only needed to work around CMHG not defining it
+// because the standard RISC OS headers define Joystick_Read (base)
+#define Joystick_Status                 0x043f43
+
+
+
+// RISC OS API (Acorn or Serial Port)
+#define NOT_MAPPED      -1000
+#define NONE_AVAILABLE  -1
+
+#define ACORN_AXIS_VALUES_8             254
+#define ACORN_AXIS_MIN_VALUE_8         -127
+#define ACORN_AXIS_HAT_SCALE_8           64
+
+#define ACORN_BUTTONS   8
+
+#define ACORN_AXIS_VALUES_16            65535
+#define ACORN_AXIS_MIN_VALUE_16             0
+#define ACORN_AXIS_HAT_MIN_16           12288
+#define ACORN_AXIS_HAT_MID_16           32768
+#define ACORN_AXIS_HAT_MAX_16           53247
+
+//#define ADC_AXIS_VALUES            65535
+//#define ADC_AXIS_MIN_VALUE             0
+//#define ADC_AXIS_HAT_MIN           12288
+//#define ADC_AXIS_HAT_MID           32768
+//#define ADC_AXIS_HAT_MAX           53247
+
+#define ADC_AXIS_VALUES            65520
+#define ADC_AXIS_MIN_VALUE             0
+// these next three are dubious!
+#define ADC_AXIS_HAT_MIN           12288
+#define ADC_AXIS_HAT_MID           32760
+#define ADC_AXIS_HAT_MAX           53247
+
+
+#define USB_PATH_SPECIFIER "devices#interface=%d;endpoint=%d;nopad;noblock:%s"
+
+
+
+// from xmame - /unix/devices.h
+#define JOY_MAX               8
+#define JOY_BUTTONS          32
+#define JOY_USAGE_AXES       16
+#define JOY_AXES             20
+#define JOY_NAME_LEN         20
+#define JOY_MAX_DATA_LENGTH  64
+
+// our axes types: note that we must not use 0
+#define AXIS_HATX     1
+#define AXIS_HATY     2
+#define AXIS_DPADX    3
+#define AXIS_DPADY    4
+#define AXIS_X        5
+#define AXIS_Y        6
+#define AXIS_Z        7
+#define AXIS_RX       8
+#define AXIS_RY       9
+#define AXIS_RZ       10
+#define AXIS_SLIDER   11
+
+
+// xmame: /src/unix/devices.h
+struct axisdata_struct
+{
+  int            val;
+  int            min;
+  int            mid;
+  int            max;
+  // risc os additions:
+  float          acorn_slope_8;
+  float          acorn_slope_16;
+  float          adc_slope;
+  int            serial_port_upper_bound;
+  int            serial_port_lower_bound;
+  osbool         is_digital;
+  char           *name;
+  osbool         flip;
+  unsigned int   type;          // todo: make a type/enum for this?
+};
+
+struct joydata_struct
+{
+  // xmame: joy_usb.c
+  unsigned int             report_length;
+  osbool                   has_report_id;  // indicates if first data byte is the reportid
+  char                     *data_buf;      // only for the report id+data
+  struct hid_item          *axes_items[JOY_USAGE_AXES];  // only analogue axes
+  struct hid_item          *button_items[JOY_BUTTONS];
+  struct hid_item          *hat_item;
+  struct hid_item          *dpad_up_item;
+  struct hid_item          *dpad_down_item;
+  struct hid_item          *dpad_left_item;
+  struct hid_item          *dpad_right_item;
+  osbool                   has_dpad;
+  osbool                   has_hat;
+  unsigned int             hat_axis;   // if we have one, this is the x (y will be next)
+  unsigned int             dpad_axis;  // if we have one, this is the x (y will be next)
+  // from xmame core:
+  unsigned int             num_axes;
+  unsigned int             num_buttons;
+  struct axisdata_struct   axes[JOY_AXES];
+  unsigned int             buttons[JOY_BUTTONS];
+  // risc os additions follow:
+  struct joy_device_struct *device;
+  osbool                   in_use;
+  osbool                   open;
+  char                     device_name[USB_DEVICE_NAME_LENGTH];
+  uint8_t                  interface;
+  uint8_t                  endpoint;
+  char                     usb_path[USB_DEVICEFS_PATH_MAX_LENGTH];
+  os_fw                    fp;
+  buffer_b                 buffer_handle;
+  buffer_internal_id       buffer_internal_id;
+  asm_routine              buffer_service_routine;
+  void                     *buffer_workspace;
+  unsigned int             devicefs_handle;
+  unsigned int             upcalls;
+  unsigned int             upcalls_delta;
+  char                     manufacturer[USB_MAX_STRING_LEN];
+  char                     product[USB_MAX_STRING_LEN];
+  char                     serial[USB_MAX_STRING_LEN];
+  unsigned int             vendor_id;
+  unsigned int             product_id;
+  unsigned int             device_id;
+  unsigned int             good_reads;
+  unsigned int             good_reads_delta;
+  unsigned int             bad_reads;
+  unsigned int             bad_reads_delta;
+  int                      mapped_number;
+  int                      mapped_x_8;
+  int                      mapped_y_8;
+  int                      mapped_x_16;
+  int                      mapped_y_16;
+  unsigned int             mapped_buttons[ACORN_BUTTONS];
+};
+
+struct adc_map_struct
+{
+  int joy_id;
+  int channel0;
+  int channel1;
+  int channel2;
+  int channel3;
+  int fire0;
+  int fire1;
+};
+
+struct adc_data_struct
+{
+  int channels_to_be_sampled;
+  int current_channel;
+  int channel0;
+  int channel1;
+  int channel2;
+  int channel3;
+  int fire0;
+  int fire1;
+};
+
+
+
+// the following will be initialised in usbjoystick.c
+
+extern unsigned int joy_index;
+extern unsigned int axis_max;
+extern struct joydata_struct joy_data[];
+extern struct adc_data_struct adc_data;
+extern struct adc_map_struct adc_map;
+
+extern osbool emulate_acorn_on;
+extern osbool emulate_serial_port_on;
+extern osbool emulate_joy_on;
+extern osbool emulate_adc_on;
+extern osbool upcall_claimed;
+extern osbool ukswiv_claimed;
+extern osbool bytev_claimed;
+
+extern void* g_module_pw;
+
+
+
+
+// Custom Report Descriptors
+
+static const uint8_t uhid_xb360gp_report_descr[] = {UHID_XB360GP_REPORT_DESCR()};
+
+#define JOY_TYPE_STANDARD   0
+#define JOY_TYPE_XBOX360    1
+#define JOY_TYPE_XBOX360WL  2
+
+#define JOY_INIT_COMMAND_MAX_LENGTH 255
+
+typedef osbool (joy_device_data_valid_fn)(char *d);
+
+struct joy_device_struct {
+  uint8_t                    interface_class;
+  uint8_t                    interface_subclass;
+  uint8_t                    interface_protocol;
+  uint16_t                   vendor_id;
+  uint16_t                   product_id;
+  char                       *name;
+  uint8_t                    type;
+  uint8_t                    *report_descriptor;
+  uint8_t                    report_descriptor_length;
+  uint8_t                    report_data_offset;      // additional bytes before report data starts
+  uint8_t                    init_command[JOY_INIT_COMMAND_MAX_LENGTH];
+  uint8_t                    init_command_length;
+  uint8_t                    auto_flip_axes[JOY_AXES];
+  uint8_t                    auto_flip_axes_length;
+  joy_device_data_valid_fn   *data_valid;
+};
+
+//extern static const struct joy_device_struct joy_devices[];
+extern unsigned int joy_devices_count;
+
+
+
+// Errors
+//
+// kernel.h defines: ErrorBase_Joystick as &43F40  (Acorn's error!)
+
+extern _kernel_oserror err_syntax;
+extern _kernel_oserror err_badnoparms;
+extern _kernel_oserror err_toomanyparms;
+
+extern _kernel_oserror err_nosuchswi;
+extern _kernel_oserror err_modulebadswi;
+
+extern _kernel_oserror err_badjoy;
+extern _kernel_oserror err_nousb;
+extern _kernel_oserror err_joynotactive;
+extern _kernel_oserror err_joynotopen;
+
+
+
+
+
+// The SWI configuration is set up to match the Acorn standard
+#define USBJoystickSWI_Base  0x43F40
+#define USBJoystickSWI_Name  Joystick
+
+#define MODULE_SWI(name) (name - USBJoystickSWI_Base)
+
+// This is what we will also trap  Serial Port interface compatibility
+#define USBJoystickSerialPortSWI  0x81540
+
+// This is what we will also trap for Joy interface conpatibility
+#define JoySWI_Read0      0xCFFC0
+#define JoySWI_Read1      0xCFFC1
+#define JoySWI_Test       0xCFFC2
+#define JoySWI_ReadPipe   0xCFFC3
+
+
+
+
+
+_kernel_oserror *module_initialise(const char *cmd_tail, int podule_base, void *pw);
+_kernel_oserror *module_finalise(int fatal, int podule, void *pw);
+_kernel_oserror *module_swi(int swi_offset, _kernel_swi_regs *r, void *pw);
+
+extern void upcallv_hook(void);
+int upcallv_hook_handler(_kernel_swi_regs *r, void *pw);
+
+extern void ukswiv_pre_hook(void*);
+_kernel_oserror* ukswiv_hook_handler(_kernel_swi_regs *r, void *pw);
+
+extern void bytev_hook(void);
+int bytev_hook_handler(_kernel_swi_regs *r, void *pw);
+
+_kernel_oserror* swi_joystick_read(_kernel_swi_regs *r);
+_kernel_oserror* swi_joystick_status(_kernel_swi_regs *r);
+_kernel_oserror* swi_joy_read(_kernel_swi_regs *r, int n);
+_kernel_oserror* swi_joy_test(_kernel_swi_regs *r);
+_kernel_oserror* swi_joy_readpipe(_kernel_swi_regs *r);
+unsigned int encode_stick_serial_port(int i);
+void joystick_read_acorn_8(_kernel_swi_regs *r, unsigned int i);
+void joystick_read_acorn_16(_kernel_swi_regs *r, unsigned int i);
+unsigned int adc_read_channel(unsigned int channel);
+unsigned int adc_read_fire(void);
+
+void servicecall_handler(int service_number, _kernel_swi_regs *r, void *pw);
+
+osbool xbox360wireless_data_validator(char *d);
+
+_kernel_oserror *command_list(const char *args, int argc);
+_kernel_oserror *command_read(const char *args, int argc);
+_kernel_oserror *command_map_buttons(const char *args, int argc);
+_kernel_oserror *command_map_axes(const char *args, int argc, osbool sixteenbit);
+_kernel_oserror *command_map_stick(const char *args, int argc);
+_kernel_oserror *command_map_adc(const char *args, int argc);
+_kernel_oserror *command_emulate_acorn(const char *args, int argc);
+_kernel_oserror *command_emulate_serial_port(const char *args, int argc);
+_kernel_oserror *command_emulate_joy(const char *args, int argc);
+_kernel_oserror *command_emulate_adc(const char *args, int argc);
+_kernel_oserror *command_debug(const char *args, int argc);
+_kernel_oserror *command_handler(const char *args, int argc, int cmdno, void *pw);
+_kernel_oserror *command_flip(const char *args, int argc);
+_kernel_oserror *command_mapped(const char *args, int argc);
+void print_joystick_map(unsigned int i);
+
+_kernel_oserror* joy_check_device(const usb_service_t* dev, void* handle);
+
+osbool parse_usb_hid_device_descriptor(unsigned int length, uint8_t* buf);
+
+_kernel_oserror* buffer_read(buffer_internal_id id, unsigned int to_read, byte *data, unsigned int *read, asm_routine code, void *ws);
+
+static struct hid_item *itemdup(struct hid_item *s);
+
+unsigned int next_available_joystick_index(void);
+void clean_joystick_data(void);
+void clean_joystick_data_item(unsigned int i);
+void open_joysticks(void);
+void open_joystick(unsigned int i);
+void joy_remove_device(const char* device_name);
+void joystick_decode(unsigned int i);
+void print_joystick(unsigned int i);
+void debug_joystick(unsigned int i);
+void auto_map(unsigned int i);
+void unmap(unsigned int i);
+osbool find_and_map_x_y_8(unsigned int i, unsigned int x_type, unsigned int y_type);
+osbool find_and_map_x_y_16(unsigned int i, unsigned int x_type, unsigned int y_type);
+void set_up_joystick(const usb_service_t* dev, usb_device_t* device, usb_device_descriptor_t* ddesc, usb_interface_descriptor_t* idesc, usb_endpoint_descriptor_t* edesc);
+struct joy_device_struct *lookup_joy_device(uint8_t iClass, uint8_t iSubClass, uint8_t iProtocol, uint16_t vendor, uint16_t product);
+uint8_t *get_report_descriptor(usb_device_t* device, usb_hid_device_descriptor_t *hdesc);
+struct hid_item *get_axis_item_by_type(unsigned int i, unsigned int type);
+
+
+#endif

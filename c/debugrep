@@ -1,0 +1,27 @@
+
+#include "debugrep.h"
+
+#include "oslib/os.h"
+#include "oslib/report.h"
+
+#include <stdarg.h>
+#include <stdio.h>
+
+#define DEBUG_MAX_LINE_LENGTH 256
+
+int debug_printf(char *cntrl_string, ...)
+{
+        char            s[DEBUG_MAX_LINE_LENGTH];
+        int             ret;
+        va_list         ap;
+
+        if (xos_swi_number_from_string("Report_Text0", NULL) != NULL)
+                return 0;
+
+        va_start(ap, cntrl_string);
+        ret = vsnprintf(s, DEBUG_MAX_LINE_LENGTH, cntrl_string, ap);
+        s[DEBUG_MAX_LINE_LENGTH - 1] = '\0';
+        report_text0(s);
+
+        return ret;
+}

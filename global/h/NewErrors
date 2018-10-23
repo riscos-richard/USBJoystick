@@ -1,0 +1,1738 @@
+/* This source code in this file is licensed to You by Castle Technology
+ * Limited ("Castle") and its licensors on contractual terms and conditions
+ * ("Licence") which entitle you freely to modify and/or to distribute this
+ * source code subject to Your compliance with the terms of the Licence.
+ * 
+ * This source code has been made available to You without any warranties
+ * whatsoever. Consequently, Your use, modification and distribution of this
+ * source code is entirely at Your own risk and neither Castle, its licensors
+ * nor any other person who has contributed to this source code shall be
+ * liable to You for any loss or damage which You may suffer as a result of
+ * Your use, modification or distribution of this source code.
+ * 
+ * Full details of Your rights and obligations are set out in the Licence.
+ * You should have received a copy of the Licence with this source code file.
+ * If You have not received a copy, the text of the Licence is available
+ * online at www.castle-technology.co.uk/riscosbaselicence.htm
+ */
+/* Created by Hdr2H.  Do not edit.*/
+#ifndef INSTALL_DDE_ACORNC_C___EXPORT_APCS_32_C_GLOBAL_NEWERRORS_H
+#define INSTALL_DDE_ACORNC_C___EXPORT_APCS_32_C_GLOBAL_NEWERRORS_H
+
+#pragma force_top_level
+#pragma include_only_once
+
+#define ErrorNumber_Escape                       17
+#define ErrorString_Escape                       "Escape:Escape"
+#define ErrorNumber_BadMODE                      25
+#define ErrorString_BadMODE                      "BadMODE:Bad MODE"
+#define ErrorNumber_NaffMODE                     25
+#define ErrorString_NaffMODE                     "Bad MODE"
+#define ErrorNumber_FSInsufficientSpace          92
+#define ErrorString_FSInsufficientSpace          "Insufficient space"
+#define ErrorNumber_SRAMBadID                    128
+#define ErrorString_SRAMBadID                    "Bad id"
+#define ErrorNumber_GXRCantOpenFile              133
+#define ErrorString_GXRCantOpenFile              "Can't open file"
+#define ErrorNumber_GXRMissingComma              135
+#define ErrorString_GXRMissingComma              "Missing comma"
+#define ErrorNumber_GXRSpriteNosEqual            136
+#define ErrorString_GXRSpriteNosEqual            "Sprite numbers are equal"
+#define ErrorNumber_IEEEOutOfRange               ErrorNumber_GXRSpriteNosEqual
+#define ErrorString_IEEEOutOfRange               "Out of range"
+#define ErrorNumber_GXRBadNumber                 137
+#define ErrorString_GXRBadNumber                 "Bad number"
+#define ErrorNumber_IEEENoDevTalked              ErrorNumber_GXRBadNumber
+#define ErrorString_IEEENoDevTalked              "No device talked"
+#define ErrorNumber_IEEENoDevListened            138
+#define ErrorString_IEEENoDevListened            "No device listened"
+#define ErrorNumber_IEEENoBBCDevNo               139
+#define ErrorString_IEEENoBBCDevNo               "No BBC device number"
+#define ErrorNumber_IEEECLEARNotExec             140
+#define ErrorString_IEEECLEARNotExec             "CLEAR not executed"
+#define ErrorNumber_IEEEStrOFlo                  141
+#define ErrorString_IEEEStrOFlo                  "String too long"
+#define ErrorNumber_Aborted                      146
+#define ErrorString_Aborted                      "Aborted"
+#define ErrorNumber_Wont                         147
+#define ErrorString_Wont                         "No!"
+#define ErrorNumber_VFSDoorOpen                  ErrorNumber_Wont
+#define ErrorString_VFSDoorOpen                  "Door open"
+#define ErrorNumber_BadParm                      148
+#define ErrorString_BadParm                      "Bad parameter"
+#define ErrorNumber_BadCompact                   ErrorNumber_BadParm
+#define ErrorString_BadCompact                   "Bad compact"
+#define ErrorNumber_CantDelCsd                   150
+#define ErrorString_CantDelCsd                   "Can't delete CSD"
+#define ErrorNumber_CantDelLib                   151
+#define ErrorString_CantDelLib                   "Can't delete library"
+#define ErrorNumber_CompactReq                   152
+#define ErrorString_CompactReq                   "Compaction required"
+#define ErrorNumber_MapFull                      153
+#define ErrorString_MapFull                      "Map full"
+#define ErrorNumber_TFSIllegalOp                 157
+#define ErrorString_TFSIllegalOp                 "Illegal operation"
+#define ErrorNumber_BBCLineJammed                160
+#define ErrorString_BBCLineJammed                "Line jammed"
+#define ErrorNumber_BBCNetError                  161
+#define ErrorString_BBCNetError                  "Net error"
+#define ErrorNumber_BBCNotListening              162
+#define ErrorString_BBCNotListening              "Not listening"
+#define ErrorNumber_BBCNoClock                   163
+#define ErrorString_BBCNoClock                   "No clock"
+#define ErrorNumber_MachineNotPres               164
+#define ErrorString_MachineNotPres               "Machine not present"
+#define ErrorNumber_BBCNoReply                   165
+#define ErrorString_BBCNoReply                   "No reply"
+#define ErrorNumber_RAMDiscTooSmall              ErrorNumber_BBCNoReply
+#define ErrorString_RAMDiscTooSmall              "RAM disc size too small"
+#define ErrorNumber_BBCNetPrinterBusy            166
+#define ErrorString_BBCNetPrinterBusy            "Printer busy"
+#define ErrorNumber_BBCNetPrinterJammed          167
+#define ErrorString_BBCNetPrinterJammed          "Printer jammed"
+#define ErrorNumber_IsADirectory                 168
+#define ErrorString_IsADirectory                 "Object is a directory"
+#define ErrorNumber_BrokenDir                    ErrorNumber_IsADirectory
+#define ErrorString_BrokenDir                    "Broken directory"
+#define ErrorNumber_PasswordFileNotFound         ErrorNumber_IsADirectory
+#define ErrorString_PasswordFileNotFound         "Password file not found"
+#define ErrorNumber_BadFsMap                     169
+#define ErrorString_BadFsMap                     "Bad FS map"
+#define ErrorNumber_NoDir                        ErrorNumber_BadFsMap
+#define ErrorString_NoDir                        "No directory"
+#define ErrorNumber_PSTooLong                    ErrorNumber_BadFsMap
+#define ErrorString_PSTooLong                    "Too long"
+#define ErrorNumber_OneBadFsMap                  170
+#define ErrorString_OneBadFsMap                  "Bad sum"
+#define ErrorNumber_PSWrongPrintType             ErrorNumber_OneBadFsMap
+#define ErrorString_PSWrongPrintType             "Wrong printer type"
+#define ErrorNumber_BBCNetPrinterOffLine         171
+#define ErrorString_BBCNetPrinterOffLine         "Printer off line"
+#define ErrorNumber_VFSBadMODE                   173
+#define ErrorString_VFSBadMODE                   "Bad MODE"
+#define ErrorNumber_BBCNotLoggedOn               174
+#define ErrorString_BBCNotLoggedOn               "Not logged on"
+#define ErrorNumber_TypesDontMatch               175
+#define ErrorString_TypesDontMatch               "Types don't match"
+#define ErrorNumber_BadRename                    176
+#define ErrorString_BadRename                    "Bad rename"
+#define ErrorNumber_BadCopy                      177
+#define ErrorString_BadCopy                      "Bad copy"
+#define ErrorNumber_UserIDExists                 ErrorNumber_BadCopy
+#define ErrorString_UserIDExists                 "User id. exists"
+#define ErrorNumber_PasswordFileFull             178
+#define ErrorString_PasswordFileFull             "Password file full"
+#define ErrorNumber_DirFull                      179
+#define ErrorString_DirFull                      "Dir full"
+#define ErrorNumber_DirNotEmpty                  180
+#define ErrorString_DirNotEmpty                  "Dir not empty"
+#define ErrorNumber_TryLoadDir                   181
+#define ErrorString_TryLoadDir                   "Trying to load a directory"
+#define ErrorNumber_MapRWErr                     182
+#define ErrorString_MapRWErr                     "Disc error on map R/W"
+#define ErrorNumber_OutsideFile                  183
+#define ErrorString_OutsideFile                  "OutsideFile:Outside file"
+#define ErrorNumber_TooManyUsers                 184
+#define ErrorString_TooManyUsers                 "Too many users"
+#define ErrorNumber_BadPassword                  185
+#define ErrorString_BadPassword                  "Bad password"
+#define ErrorNumber_InsufficientPriv             186
+#define ErrorString_InsufficientPriv             "Insufficient privilege"
+#define ErrorNumber_IncorrectPassword            187
+#define ErrorString_IncorrectPassword            "Incorrect password"
+#define ErrorNumber_UserNotKnown                 188
+#define ErrorString_UserNotKnown                 "User not known"
+#define ErrorNumber_AccessViolation              189
+#define ErrorString_AccessViolation              "Access violation"
+#define ErrorNumber_BBCInsufficientAccess        ErrorNumber_AccessViolation
+#define ErrorString_BBCInsufficientAccess        "Insufficient access"
+#define ErrorNumber_NotEnabled                   ErrorNumber_AccessViolation
+#define ErrorString_NotEnabled                   "Not enabled"
+#define ErrorNumber_CatFull                      190
+#define ErrorString_CatFull                      "Cat full"
+#define ErrorNumber_WhoAreYou                    191
+#define ErrorString_WhoAreYou                    "Who are you?"
+#define ErrorNumber_CantExtend                   ErrorNumber_WhoAreYou
+#define ErrorString_CantExtend                   "Can't extend"
+#define ErrorNumber_TooManyOpenFiles             192
+#define ErrorString_TooManyOpenFiles             "Too many open files"
+#define ErrorNumber_NotOpenForUpdate             193
+#define ErrorString_NotOpenForUpdate             "Not open for update"
+#define ErrorNumber_FileReadOnly                 ErrorNumber_NotOpenForUpdate
+#define ErrorString_FileReadOnly                 "File read only"
+#define ErrorNumber_FileOpen                     194
+#define ErrorString_FileOpen                     "File open"
+#define ErrorNumber_AlreadyOpen                  ErrorNumber_FileOpen
+#define ErrorString_AlreadyOpen                  "Already open"
+#define ErrorNumber_CantFileOpen                 ErrorNumber_FileOpen
+#define ErrorString_CantFileOpen                 "Can't - file open"
+#define ErrorNumber_ObjectLocked                 195
+#define ErrorString_ObjectLocked                 "Locked"
+#define ErrorNumber_AlreadyExists                196
+#define ErrorString_AlreadyExists                "Already exists"
+#define ErrorNumber_DriveFault                   197
+#define ErrorString_DriveFault                   "Drive fault"
+#define ErrorNumber_DiscFull                     198
+#define ErrorString_DiscFull                     "Disc full"
+#define ErrorNumber_Disc                         199
+#define ErrorString_Disc                         "Disc error"
+#define ErrorNumber_DiscFault                    ErrorNumber_Disc
+#define ErrorString_DiscFault                    "Disc fault"
+#define ErrorNumber_DiscChanged                  200
+#define ErrorString_DiscChanged                  "Disc changed"
+#define ErrorNumber_WriteProt                    201
+#define ErrorString_WriteProt                    "Disc protected"
+#define ErrorNumber_DiscReadOnly                 ErrorNumber_WriteProt
+#define ErrorString_DiscReadOnly                 "Disc read only"
+#define ErrorNumber_DataLost                     202
+#define ErrorString_DataLost                     "Data lost"
+#define ErrorNumber_BadSum                       ErrorNumber_DataLost
+#define ErrorString_BadSum                       "Bad sum"
+#define ErrorNumber_BadOption                    203
+#define ErrorString_BadOption                    "Bad opt"
+#define ErrorNumber_BadFileName                  204
+#define ErrorString_BadFileName                  "Bad file name"
+#define ErrorNumber_BBCBadName                   ErrorNumber_BadFileName
+#define ErrorString_BBCBadName                   "Bad name"
+#define ErrorNumber_DriveNotReady                205
+#define ErrorString_DriveNotReady                "Drive not ready"
+#define ErrorNumber_BadDrive                     ErrorNumber_DriveNotReady
+#define ErrorString_BadDrive                     "Bad drive"
+#define ErrorNumber_CommFSDoorOpen               ErrorNumber_DriveNotReady
+#define ErrorString_CommFSDoorOpen               "Door open"
+#define ErrorNumber_BadDir                       206
+#define ErrorString_BadDir                       "Bad directory"
+#define ErrorNumber_BadAtt                       207
+#define ErrorString_BadAtt                       "Bad attribute"
+#define ErrorNumber_BadStationNo                 208
+#define ErrorString_BadStationNo                 "Bad station number"
+#define ErrorNumber_BadNetNo                     209
+#define ErrorString_BadNetNo                     "Bad net number"
+#define ErrorNumber_WriteOnly                    212
+#define ErrorString_WriteOnly                    "Write only"
+#define ErrorNumber_CFSLocked                    213
+#define ErrorString_CFSLocked                    "Locked"
+#define ErrorNumber_FileNotFound                 214
+#define ErrorString_FileNotFound                 "File not found"
+#define ErrorNumber_BBCNotFound                  ErrorNumber_FileNotFound
+#define ErrorString_BBCNotFound                  "Not found"
+#define ErrorNumber_BadROM                       215
+#define ErrorString_BadROM                       "Bad ROM"
+#define ErrorNumber_Data                         216
+#define ErrorString_Data                         "Data?"
+#define ErrorNumber_Header                       217
+#define ErrorString_Header                       "Header?"
+#define ErrorNumber_Block                        218
+#define ErrorString_Block                        "Block?"
+#define ErrorNumber_File                         219
+#define ErrorString_File                         "File?"
+#define ErrorNumber_Syntax                       220
+#define ErrorString_Syntax                       "Syntax:Syntax"
+#define ErrorNumber_BadNoParms                   ErrorNumber_Syntax
+#define ErrorString_BadNoParms                   "Invalid number of parameters"
+#define ErrorNumber_TooManyParms                 ErrorNumber_Syntax
+#define ErrorString_TooManyParms                 "TooManyParms:Too many parameters"
+#define ErrorNumber_Address                      221
+#define ErrorString_Address                      "Address"
+#define ErrorNumber_Channel                      222
+#define ErrorString_Channel                      "Channel"
+#define ErrorNumber_EndOfFile                    223
+#define ErrorString_EndOfFile                    "End of file"
+#define ErrorNumber_EOF                          ErrorNumber_EndOfFile
+#define ErrorString_EOF                          "EOF"
+#define ErrorNumber_Telesoftware                 234
+#define ErrorString_Telesoftware                 "Telesoftware error"
+#define ErrorNumber_BadNumber                    240
+#define ErrorString_BadNumber                    "Bad number"
+#define ErrorNumber_BBCBadHex                    241
+#define ErrorString_BBCBadHex                    "Bad hex"
+#define ErrorNumber_FX0                          247
+#define ErrorString_FX0                          ""
+#define ErrorNumber_BadFilingSystemName          248
+#define ErrorString_BadFilingSystemName          "Bad filing system name"
+#define ErrorNumber_UnknownFilingSystem          ErrorNumber_BadFilingSystemName
+#define ErrorString_UnknownFilingSystem          "Unknown filing system"
+#define ErrorNumber_NoFilingSystem               ErrorNumber_BadFilingSystemName
+#define ErrorString_NoFilingSystem               "No filing system"
+#define ErrorNumber_NoLanguage                   249
+#define ErrorString_NoLanguage                   "No language ROM"
+#define ErrorNumber_KeyInUse                     250
+#define ErrorString_KeyInUse                     "Key in use"
+#define ErrorNumber_BadKey                       251
+#define ErrorString_BadKey                       "BadKey:Bad key"
+#define ErrorNumber_BadAddress                   252
+#define ErrorString_BadAddress                   "BadAddress:Bad address"
+#define ErrorNumber_BadString                    253
+#define ErrorString_BadString                    "BadString:Bad string"
+#define ErrorNumber_BadAliasString               ErrorNumber_BadString
+#define ErrorString_BadAliasString               "Aliased command is a bad string"
+#define ErrorNumber_BadParmString                ErrorNumber_BadString
+#define ErrorString_BadParmString                "BadParmString:Bad character in parameter expansion"
+#define ErrorNumber_WildCards                    253
+#define ErrorString_WildCards                    "Wild cards"
+#define ErrorNumber_BadCommand                   254
+#define ErrorString_BadCommand                   "BadCommand:Bad command"
+#define ErrorNumber_Bad                          255
+#define ErrorString_Bad                          "Bad"
+#define ErrorNumber_NotMod                       0x100
+#define ErrorString_NotMod                       "NotMod:This is not a relocatable module"
+#define ErrorNumber_MHNoRoom                     0x101
+#define ErrorString_MHNoRoom                     "MHNoRoom:No room in RMA"
+#define ErrorNumber_RMNotFound                   0x102
+#define ErrorString_RMNotFound                   "RMNotFound:Module not found"
+#define ErrorNumber_CantKill                     0x103
+#define ErrorString_CantKill                     "CantKill:Module is currently active"
+#define ErrorNumber_CantKill2                    ErrorNumber_CantKill
+#define ErrorString_CantKill2                    "Module is currently active"
+#define ErrorNumber_WimpCantKill                 0x104
+#define ErrorString_WimpCantKill                 "CantKill"
+#define ErrorNumber_BadModuleReason              0x105
+#define ErrorString_BadModuleReason              "BadModuleReason:Unknown OS_Module call"
+#define ErrorNumber_BadDynamicArea               ErrorNumber_BadModuleReason
+#define ErrorString_BadDynamicArea               "BadDynamicArea:Unknown dynamic area"
+#define ErrorNumber_RMNotFoundInROM              0x106
+#define ErrorString_RMNotFoundInROM              "RMNotFoundInROM:Module is not in ROM"
+#define ErrorNumber_ModulePostfix                0x107
+#define ErrorString_ModulePostfix                "ModulePostfix:'%%' in module title"
+#define ErrorNumber_NoMoreModules                0x108
+#define ErrorString_NoMoreModules                "NoMoreModules:No more modules"
+#define ErrorNumber_NoMoreIncarnations           0x109
+#define ErrorString_NoMoreIncarnations           "NoMoreIncarnations:No more incarnations of that module"
+#define ErrorNumber_PostfixNeeded                0x10a
+#define ErrorString_PostfixNeeded                "PostfixNeeded:Postfix not specified"
+#define ErrorNumber_IncarnationExists            0x10b
+#define ErrorString_IncarnationExists            "IncarnationExists:Incarnation already exists"
+#define ErrorNumber_IncarnationNotFound          0x10c
+#define ErrorString_IncarnationNotFound          "IncarnationNotFound:Incarnation not found"
+#define ErrorNumber_ChunkNotRM                   0x10d
+#define ErrorString_ChunkNotRM                   "ChunkNotRM:Podule chunk is not a relocatable module"
+#define ErrorNumber_BadRMHeaderField             0x10e
+#define ErrorString_BadRMHeaderField             "BadRMHeaderField:Illegal header field in module"
+#define ErrorNumber_ModuleTooOld                 0x10f
+#define ErrorString_ModuleTooOld                 "ModuleTooOld:Module '%0' too old"
+#define ErrorNumber_ModuleBadSWI                 0x110
+#define ErrorString_ModuleBadSWI                 "BadSWI"
+#define ErrorNumber_ModuleInUse                  0x111
+#define ErrorString_ModuleInUse                  "ModInUs"
+#define ErrorNumber_BadFilingSystemOperation     0x112
+#define ErrorString_BadFilingSystemOperation     "BadFSOp"
+#define ErrorNumber_FilingSystemReadOnly         0x113
+#define ErrorString_FilingSystemReadOnly         "FSNoWrt"
+#define ErrorNumber_NotADirectory                0x114
+#define ErrorString_NotADirectory                "IsntDir"
+#define ErrorNumber_NaffSWI                      ErrorNumber_ModuleBadSWI
+#define ErrorString_NaffSWI                      "SWI not known"
+#define ErrorNumber_NeedMod                      0x115
+#define ErrorString_NeedMod                      "Module %0 cannot start without module %1"
+#define ErrorNumber_RMNot32bit                   ErrorNumber_BadRMHeaderField
+#define ErrorString_RMNot32bit                   "RMNot32bit:Module is not 32-bit compatible"
+#define ErrorNumber_BadErrPtr                    0x116
+#define ErrorString_BadErrPtr                    "BadErrPtr:SWI &%0 returned a bad error pointer"
+#define ErrorNumber_BadMacVal                    0x120
+#define ErrorString_BadMacVal                    "BadMacVal:Bad macro value"
+#define ErrorNumber_BadVarNam                    0x121
+#define ErrorString_BadVarNam                    "BadVarNam:Bad variable name"
+#define ErrorNumber_BadVarType                   0x122
+#define ErrorString_BadVarType                   "BadVarType:Bad variable type"
+#define ErrorNumber_VarNoRoom                    0x123
+#define ErrorString_VarNoRoom                    "VarNoRoom:No room for variable"
+#define ErrorNumber_VarCantFind                  0x124
+#define ErrorString_VarCantFind                  "VarCantFind:Variable not found"
+#define ErrorNumber_VarTooLong                   0x125
+#define ErrorString_VarTooLong                   "VarTooLong:Variable value too long"
+#define ErrorNumber_RedirectFail                 0x140
+#define ErrorString_RedirectFail                 "RedirectFail:Redirection fails"
+#define ErrorNumber_StackFull                    0x141
+#define ErrorString_StackFull                    "StackFull:No room on supervisor stack"
+#define ErrorNumber_BadHex                       0x160
+#define ErrorString_BadHex                       "Bad hex"
+#define ErrorNumber_BadExpr                      0x161
+#define ErrorString_BadExpr                      "Bad expression"
+#define ErrorNumber_BadBra                       0x162
+#define ErrorString_BadBra                       "BadBra:Mismatched brackets"
+#define ErrorNumber_StkOFlo                      0x163
+#define ErrorString_StkOFlo                      "StkOFlo:Expression stack overflow"
+#define ErrorNumber_MissOpn                      0x164
+#define ErrorString_MissOpn                      "MissOpn:Missing operand"
+#define ErrorNumber_MissOpr                      0x165
+#define ErrorString_MissOpr                      "MissOpr:Missing operator"
+#define ErrorNumber_BadInt                       0x166
+#define ErrorString_BadInt                       "BadInt:String is not convertible to integer"
+#define ErrorNumber_StrOFlo                      0x167
+#define ErrorString_StrOFlo                      "StrOFlo:String too long"
+#define ErrorNumber_NaffItm                      0x168
+#define ErrorString_NaffItm                      "NaffItm:Unknown operand"
+#define ErrorNumber_DivZero                      0x169
+#define ErrorString_DivZero                      "DivZero:Division by zero"
+#define ErrorNumber_BadBase                      0x16a
+#define ErrorString_BadBase                      "BadBase:Bad base"
+#define ErrorNumber_BadNumb                      0x16b
+#define ErrorString_BadNumb                      "BadNumb:Bad number"
+#define ErrorNumber_NumbTooBig                   0x16c
+#define ErrorString_NumbTooBig                   "NumbTooBig:Number too big"
+#define ErrorNumber_HeapBadReason                0x180
+#define ErrorString_HeapBadReason                "HeapBadReason:Bad reason code"
+#define ErrorNumber_HeapFail_Init                0x181
+#define ErrorString_HeapFail_Init                "HeapFailInit:Can't initialise heap"
+#define ErrorNumber_HeapFail_BadDesc             0x182
+#define ErrorString_HeapFail_BadDesc             "BadDesc:Bad heap descriptor"
+#define ErrorNumber_HeapFail_BadLink             0x183
+#define ErrorString_HeapFail_BadLink             "BadLink:Heap corrupted"
+#define ErrorNumber_HeapFail_Alloc               0x184
+#define ErrorString_HeapFail_Alloc               "HeapFailAlloc:Heap Full"
+#define ErrorNumber_HeapFail_NotABlock           0x185
+#define ErrorString_HeapFail_NotABlock           "NotABlock:Not a heap block"
+#define ErrorNumber_HeapFail_BadExtend           0x186
+#define ErrorString_HeapFail_BadExtend           "BadExtend:No RAM for extending heap"
+#define ErrorNumber_HeapFail_ExcessiveShrink     0x187
+#define ErrorString_HeapFail_ExcessiveShrink     "ExcessiveShrink:Can't shrink heap any further"
+#define ErrorNumber_HeapFail_HeapLocked          0x188
+#define ErrorString_HeapFail_HeapLocked          "Heap Manager busy"
+#define ErrorBase_TerritoryManager               (0x190)
+#define ErrorNumber_BadClaimNum                  0x1a0
+#define ErrorString_BadClaimNum                  "BadClaimNum:Bad vector number"
+#define ErrorNumber_NaffRelease                  0x1a1
+#define ErrorString_NaffRelease                  "NaffRelease:Bad vector release"
+#define ErrorNumber_NaffDevNo                    0x1a2
+#define ErrorString_NaffDevNo                    "NaffDevNo:Bad device number"
+#define ErrorNumber_BadDevVecRel                 0x1a3
+#define ErrorString_BadDevVecRel                 "BadDevVecRel:Bad device release"
+#define ErrorNumber_BadEnvNumber                 0x1b0
+#define ErrorString_BadEnvNumber                 "BadEnvNumber"
+#define ErrorNumber_CantCancelQuit               0x1b1
+#define ErrorString_CantCancelQuit               "Can't delete exit handler"
+#define ErrorNumber_ChDynamCAO                   0x1c0
+#define ErrorString_ChDynamCAO                   "ChDynamCAO:Can't, application running"
+#define ErrorNumber_ChDynamNotAllMoved           0x1c1
+#define ErrorString_ChDynamNotAllMoved           "NotAllMoved:Unable to move memory"
+#define ErrorNumber_AplWSpaceInUse               0x1c2
+#define ErrorString_AplWSpaceInUse               "AplWSpaceInUse:Memory in use"
+#define ErrorNumber_RAMFsUnchangeable            0x1c3
+#define ErrorString_RAMFsUnchangeable            "RAMFsUnchangeable:RAM filing system not empty"
+#define ErrorNumber_AreaAlreadyExists            0x1c4
+#define ErrorString_AreaAlreadyExists            "AreaAlreadyExists:Dynamic area already exists"
+#define ErrorNumber_AreaNotOnPageBdy             0x1c5
+#define ErrorString_AreaNotOnPageBdy             "AreaNotOnPageBdy:Base address not on page boundary"
+#define ErrorNumber_OverlappingAreas             0x1c6
+#define ErrorString_OverlappingAreas             "OverlappingAreas:Overlapping areas"
+#define ErrorNumber_CantAllocateArea             0x1c7
+#define ErrorString_CantAllocateArea             "CantAllocateArea:Unable to allocate logical address space"
+#define ErrorNumber_CantAllocateLevel2           0x1c8
+#define ErrorString_CantAllocateLevel2           "CantAllocateLevel2:Unable to allocate page tables for area"
+#define ErrorNumber_UnknownAreaHandler           0x1c9
+#define ErrorString_UnknownAreaHandler           "UnknownAreaHandler:Unknown dynamic area handler call"
+#define ErrorNumber_CantGetPhysMem               0x1ca
+#define ErrorString_CantGetPhysMem               "CantGetPhysMem:Physical memory pages unavailable"
+#define ErrorNumber_AreaLocked                   0x1cb
+#define ErrorString_AreaLocked                   "Area Locked"
+#define ErrorNumber_AreaLockCodeWrong            0x1cc
+#define ErrorString_AreaLockCodeWrong            "Area Lock Code Wrong"
+#define ErrorNumber_ChangeDynReEntered           0x1cd
+#define ErrorString_ChangeDynReEntered           "CDA Re-entered"
+#define ErrorNumber_BadOpOnSpareDA               0x1ce
+#define ErrorString_BadOpOnSpareDA               "Bad Op on sparse DA"
+#define ErrorNumber_FreePoolLocked               0x1cf
+#define ErrorString_FreePoolLocked               "Free pool locked"
+#define ErrorNumber_BadDynamicAreaOptions        0x1d0
+#define ErrorString_BadDynamicAreaOptions        "BadDynamicAreaOptions:Bad dynamic area options"
+#define ErrorNumber_BadPageNumber                0x1d1
+#define ErrorString_BadPageNumber                "BadPageNumber:Bad page number"
+#define ErrorNumber_OscliLongLine                0x1e0
+#define ErrorString_OscliLongLine                "OscliLongLine:Too long"
+#define ErrorNumber_OscliTooHard                 0x1e1
+#define ErrorString_OscliTooHard                 "OscliTooHard:Expansion too complex"
+#define ErrorNumber_RCExc                        0x1e2
+#define ErrorString_RCExc                        "RCExc:Return code limit exceeded"
+#define ErrorNumber_RCNegative                   ErrorNumber_RCExc
+#define ErrorString_RCNegative                   "RCNegative:Negative return code"
+#define ErrorNumber_SysHeapFull                  0x1e3
+#define ErrorString_SysHeapFull                  "SysHeapFull:System heap full"
+#define ErrorNumber_BuffOverflow                 0x1e4
+#define ErrorString_BuffOverflow                 "BuffOverflow:Buffer overflow"
+#define ErrorNumber_BadTime                      0x1e5
+#define ErrorString_BadTime                      "BadTime:Invalid time interval"
+#define ErrorNumber_NoSuchSWI                    0x1e6
+#define ErrorString_NoSuchSWI                    "NoSuchSWI:SWI not known"
+#define ErrorNumber_NoSuchSWI1                   ErrorNumber_NoSuchSWI
+#define ErrorString_NoSuchSWI1                   "NoSuchSWI1:SWI &%0 not known"
+#define ErrorNumber_NoSuchSWI2                   ErrorNumber_NoSuchSWI
+#define ErrorString_NoSuchSWI2                   "NoSuchSWI2:SWI name not known"
+#define ErrorNumber_UnImplemented                0x1e7
+#define ErrorString_UnImplemented                "This function or procedure unimplemented"
+#define ErrorNumber_OutOfRange                   0x1e8
+#define ErrorString_OutOfRange                   "SWI value out of range for this Module"
+#define ErrorNumber_NoOscliSpecials              0x1e9
+#define ErrorString_NoOscliSpecials              "NoOscliSpecials:Special field not allowed in filing system prefix to OS_CLI"
+#define ErrorNumber_BadParameters                0x1ea
+#define ErrorString_BadParameters                "BadParameters:Bad parameters"
+#define ErrorNumber_ArgRepeated                  0x1eb
+#define ErrorString_ArgRepeated                  "ArgRepeated:Argument repeated"
+#define ErrorNumber_BadReadSysInfo               0x1ec
+#define ErrorString_BadReadSysInfo               "BadReadSysInfo:Unknown OS_ReadSysInfo call"
+#define ErrorNumber_ModeNotAvailable             0x1ed
+#define ErrorString_ModeNotAvailable             "ModeNotAvailable:Screen mode not available"
+#define ErrorNumber_BadPixelDepth                0x1ee
+#define ErrorString_BadPixelDepth                "BadPixelDepth:Bad pixel depth"
+#define ErrorNumber_BadMSFlags                   0x1ef
+#define ErrorString_BadMSFlags                   "BadMSFlags:Illegal flags in mode selector"
+#define ErrorNumber_BadPlatReas                  0x1f0
+#define ErrorString_BadPlatReas                  "BadPlatReas:Unknown OS_PlatformFeatures reason code"
+#define ErrorNumber_UnConv                       0x1f1
+#define ErrorString_UnConv                       "UnConv:Unsupported conversion"
+#define ErrorNumber_ScreenModeBadReason          0x1f2
+#define ErrorString_ScreenModeBadReason          "Zonk:Unknown OS_ScreenMode reason code"
+#define ErrorNumber_GDriverNotReg                0x1f3
+#define ErrorString_GDriverNotReg                "GDNotReg:Graphics driver not registered"
+#define ErrorNumber_BadKeyHandler                0x1f4
+#define ErrorString_BadKeyHandler                "BadKeyHandler:Bad key handler"
+#define ErrorNumber_BadGDriver                   0x1f5
+#define ErrorString_BadGDriver                   "BadGDriver:Bad graphics driver number"
+#define ErrorNumber_TooManyGDrivers              0x1f6
+#define ErrorString_TooManyGDrivers              "TooManyGDrivers:Too many graphics drivers"
+#define ErrorNumber_WimpNoClaim                  0x280
+#define ErrorString_WimpNoClaim                  "NoClaim"
+#define ErrorNumber_WimpBadOp                    0x281
+#define ErrorString_WimpBadOp                    "BadOp"
+#define ErrorNumber_WimpRectFull                 0x282
+#define ErrorString_WimpRectFull                 "RectFull"
+#define ErrorNumber_WimpTooMany                  0x283
+#define ErrorString_WimpTooMany                  "Too many windows"
+#define ErrorNumber_WimpTooBig                   0x284
+#define ErrorString_WimpTooBig                   "TooBig"
+#define ErrorNumber_WimpDivBy0                   0x285
+#define ErrorString_WimpDivBy0                   "Division by zero"
+#define ErrorNumber_WimpGetRect                  0x286
+#define ErrorString_WimpGetRect                  "GetRect"
+#define ErrorNumber_WimpFocus                    0x287
+#define ErrorString_WimpFocus                    "Focus"
+#define ErrorNumber_WimpBadHandle                0x288
+#define ErrorString_WimpBadHandle                "BadHandle"
+#define ErrorNumber_WimpTooMenus                 0x289
+#define ErrorString_WimpTooMenus                 "TooMenus"
+#define ErrorNumber_WimpBadExtent                0x28a
+#define ErrorString_WimpBadExtent                "BadExtent"
+#define ErrorNumber_WimpBadPointer               0x28b
+#define ErrorString_WimpBadPointer               "BadPointer"
+#define ErrorNumber_WimpNoTemplateFile           0x28c
+#define ErrorString_WimpNoTemplateFile           "NoTemplateFile"
+#define ErrorNumber_WimpBadTemplate              0x28d
+#define ErrorString_WimpBadTemplate              "BadTemplate"
+#define ErrorNumber_WimpBadFonts                 0x28e
+#define ErrorString_WimpBadFonts                 "BadFonts"
+#define ErrorNumber_WimpBadSyntax                0x28f
+#define ErrorString_WimpBadSyntax                "BadSyntax"
+#define ErrorNumber_WimpNoTasks                  0x290
+#define ErrorString_WimpNoTasks                  "NoTasks"
+#define ErrorNumber_WimpNoTemplate               0x291
+#define ErrorString_WimpNoTemplate               "NoTemplate"
+#define ErrorNumber_WimpNotPresent               0x292
+#define ErrorString_WimpNotPresent               "Window manager not present / too old"
+#define ErrorNumber_WimpInUse                    0x293
+#define ErrorString_WimpInUse                    "InUse"
+#define ErrorNumber_WimpBadPalFile               0x294
+#define ErrorString_WimpBadPalFile               "BadPalFile"
+#define ErrorNumber_WimpBadVersion               0x295
+#define ErrorString_WimpBadVersion               "BadVersion"
+#define ErrorNumber_WimpBadMessageSize           0x296
+#define ErrorString_WimpBadMessageSize           "BadMessageSize"
+#define ErrorNumber_WimpBadReasonCode            0x297
+#define ErrorString_WimpBadReasonCode            "BadReasonCode"
+#define ErrorNumber_WimpBadTaskHandle            0x298
+#define ErrorString_WimpBadTaskHandle            "BadTaskHandle"
+#define ErrorNumber_WimpCantTask                 0x299
+#define ErrorString_WimpCantTask                 "CantTask"
+#define ErrorNumber_WimpBadSubMenu               0x29a
+#define ErrorString_WimpBadSubMenu               "BadSubMenu"
+#define ErrorNumber_WimpOwnerWindow              0x29b
+#define ErrorString_WimpOwnerWindow              "OwnerWindow"
+#define ErrorNumber_WimpBadMode                  0x29c
+#define ErrorString_WimpBadMode                  "BadMode"
+#define ErrorNumber_WimpBadTransfer              0x29d
+#define ErrorString_WimpBadTransfer              "BadTransfer"
+#define ErrorNumber_WimpBadSysInfo               0x29e
+#define ErrorString_WimpBadSysInfo               "BadSysInfo"
+#define ErrorNumber_WimpBadPtrInR1               0x29f
+#define ErrorString_WimpBadPtrInR1               "BadPtrInR1"
+#define ErrorNumber_WimpBadEscapeState           0x2a0
+#define ErrorString_WimpBadEscapeState           "BadEscapeState"
+#define ErrorNumber_WimpBadIconHandle            0x2a1
+#define ErrorString_WimpBadIconHandle            "BadIconHandle"
+#define ErrorNumber_WimpBadR3                    0x2a2
+#define ErrorString_WimpBadR3                    "BadR3"
+#define ErrorNumber_NoDotInFilename              0x2a3
+#define ErrorString_NoDotInFilename              "To save, drag the icon to a directory viewer."
+#define ErrorNumber_TemplateEOF                  0x2a4
+#define ErrorString_TemplateEOF                  "TemplateEOF"
+#define ErrorNumber_WimpBadSlot                  0x2a5
+#define ErrorString_WimpBadSlot                  "BadSlot"
+#define ErrorNumber_WimpBadConfFont              0x2a6
+#define ErrorString_WimpBadConfFont              "BadConfFont"
+#define ErrorNumber_WimpNoSprites                0x2a7
+#define ErrorString_WimpNoSprites                "NoSprites"
+#define ErrorNumber_WimpBadPalFile2              0x2a8
+#define ErrorString_WimpBadPalFile2              "BadPalFile2"
+#define ErrorNumber_WimpBadSprites               0x2a9
+#define ErrorString_WimpBadSprites               "BadSprites:Squashed or missing sprite file"
+#define ErrorNumber_WimpBadParent                0x2aa
+#define ErrorString_WimpBadParent                "BadParent:Bad parent window"
+#define ErrorNumber_CDATStackOverflow            0x2c0
+#define ErrorString_CDATStackOverflow            "CDATStackOverflow:Stack overflow"
+#define ErrorNumber_CDATBufferOverflow           0x2c1
+#define ErrorString_CDATBufferOverflow           "CDATBufferOverflow:Buffer overflow"
+#define ErrorNumber_CDATBadField                 0x2c2
+#define ErrorString_CDATBadField                 "CDATBadField:Unknown '%' field"
+#define ErrorBase_Econet                         (0x300)
+#define ErrorNumber_TxReady                      (ErrorBase_Econet + 0x0)
+#define ErrorString_TxReady                      "Tx ready"
+#define ErrorNumber_Transmitting                 (ErrorBase_Econet + 0x1)
+#define ErrorString_Transmitting                 "Transmitting"
+#define ErrorNumber_RxReady                      (ErrorBase_Econet + 0x2)
+#define ErrorString_RxReady                      "Receive block open"
+#define ErrorNumber_Receiving                    (ErrorBase_Econet + 0x3)
+#define ErrorString_Receiving                    "Receiving"
+#define ErrorNumber_Received                     (ErrorBase_Econet + 0x4)
+#define ErrorString_Received                     "Received"
+#define ErrorNumber_Transmitted                  (ErrorBase_Econet + 0x5)
+#define ErrorString_Transmitted                  "Transmitted OK"
+#define ErrorNumber_BadStation                   (ErrorBase_Econet + 0x6)
+#define ErrorString_BadStation                   "Bad station number"
+#define ErrorNumber_BadNetwork                   (ErrorBase_Econet + 0x7)
+#define ErrorString_BadNetwork                   "Bad network number"
+#define ErrorNumber_UnableToDefault              (ErrorBase_Econet + 0x8)
+#define ErrorString_UnableToDefault              "Full network address required"
+#define ErrorNumber_BadPort                      (ErrorBase_Econet + 0x9)
+#define ErrorString_BadPort                      "Bad port number"
+#define ErrorNumber_BadControl                   (ErrorBase_Econet + 0xa)
+#define ErrorString_BadControl                   "Bad flag byte value"
+#define ErrorNumber_BadBuffer                    (ErrorBase_Econet + 0xb)
+#define ErrorString_BadBuffer                    "Bad buffer address"
+#define ErrorNumber_BadSize                      (ErrorBase_Econet + 0xc)
+#define ErrorString_BadSize                      "Bad buffer size"
+#define ErrorNumber_BadMask                      (ErrorBase_Econet + 0xd)
+#define ErrorString_BadMask                      "Bad mask"
+#define ErrorNumber_BadCount                     (ErrorBase_Econet + 0xe)
+#define ErrorString_BadCount                     "Bad count"
+#define ErrorNumber_BadDelay                     (ErrorBase_Econet + 0xf)
+#define ErrorString_BadDelay                     "Bad delay"
+#define ErrorNumber_BadStatus                    (ErrorBase_Econet + 0x10)
+#define ErrorString_BadStatus                    "Bad status"
+#define ErrorNumber_NoHardware                   (ErrorBase_Econet + 0x11)
+#define ErrorString_NoHardware                   "No Econet hardware"
+#define ErrorNumber_NoEconet                     (ErrorBase_Econet + 0x12)
+#define ErrorString_NoEconet                     "No 'Econet' installed"
+#define ErrorNumber_NoMoreDomains                (ErrorBase_Econet + 0x13)
+#define ErrorString_NoMoreDomains                "No more domains"
+#define ErrorNumber_BadDomain                    (ErrorBase_Econet + 0x14)
+#define ErrorString_BadDomain                    "Bad domain number"
+#define ErrorNumber_UnRegisteredDomain           (ErrorBase_Econet + 0x15)
+#define ErrorString_UnRegisteredDomain           "Unknown domain"
+#define ErrorNumber_PortNotAllocated             (ErrorBase_Econet + 0x16)
+#define ErrorString_PortNotAllocated             "Port not already allocated"
+#define ErrorNumber_PortAllocated                (ErrorBase_Econet + 0x17)
+#define ErrorString_PortAllocated                "Port not unallocated"
+#define ErrorNumber_NoMorePorts                  (ErrorBase_Econet + 0x18)
+#define ErrorString_NoMorePorts                  "All ports allocated"
+#define ErrorNumber_NoNetworkAccess              (ErrorBase_Econet + 0x19)
+#define ErrorString_NoNetworkAccess              "No access to network"
+#define ErrorNumber_EconetInternalError          (ErrorBase_Econet + 0x1a)
+#define ErrorString_EconetInternalError          "Fatal internal error"
+#define ErrorNumber_NoEconetInterrupt            (ErrorBase_Econet + 0x1b)
+#define ErrorString_NoEconetInterrupt            "Hardware fault in Econet Interface"
+#define ErrorNumber_AUNNotConfigured             (ErrorBase_Econet + 0x1c)
+#define ErrorString_AUNNotConfigured             "AUN not configured"
+#define ErrorNumber_SetStationSyntax             ErrorNumber_Syntax
+#define ErrorString_SetStationSyntax             "Syntax: *SetStation (<new station number>)"
+#define ErrorNumber_SetStationFails              (((ErrorBase_Econet)  + 0x40) + 0x0)
+#define ErrorString_SetStationFails              "Failed to update configuration memory"
+#define ErrorNumber_GetRegsSyntax                ErrorNumber_Syntax
+#define ErrorString_GetRegsSyntax                "Syntax: *GetRegs <station number>"
+#define ErrorNumber_TestEconetSyntax             ErrorNumber_Syntax
+#define ErrorString_TestEconetSyntax             "Syntax: *TestEconet <varname>"
+#define ErrorNumber_SetScrapSyntax               ErrorNumber_Syntax
+#define ErrorString_SetScrapSyntax               "Syntax: *SetScrap <varname> <non-econet value> <econet value> (<Macro|Eval>)"
+#define ErrorNumber_NetFSVectorCorrupt           (((ErrorBase_Econet)  + 0x60) + 0x0)
+#define ErrorString_NetFSVectorCorrupt           "Unable to release, not top entry in NetFS entry vector"
+#define ErrorNumber_SWIVectorCorrupt             (((ErrorBase_Econet)  + 0x60) + 0x1)
+#define ErrorString_SWIVectorCorrupt             "Unable to release, not top entry in SWI thread"
+#define ErrorNumber_WorkspaceNotReleased         (((ErrorBase_Econet)  + 0x60) + 0x2)
+#define ErrorString_WorkspaceNotReleased         "Workspace not released"
+#define ErrorNumber_BLDisabled                   (((ErrorBase_Econet)  + 0x60) + 0x3)
+#define ErrorString_BLDisabled                   "Broadcast Loader is disabled by configuration"
+#define ErrorNumber_NotPresent                   0x38A
+#define ErrorString_NotPresent                   "Not present"
+#define ErrorNumber_NotPresent1                  ErrorNumber_NotPresent
+#define ErrorString_NotPresent1                  "Station "
+#define ErrorNumber_NotPresent2                  ErrorNumber_NotPresent
+#define ErrorString_NotPresent2                  " not present"
+#define ErrorNumber_LineJammed                   0x3A0
+#define ErrorString_LineJammed                   "Line jammed"
+#define ErrorNumber_NetError                     0x3A1
+#define ErrorString_NetError                     "Net error"
+#define ErrorNumber_NotListening                 0x3A2
+#define ErrorString_NotListening                 "Not listening"
+#define ErrorNumber_NotListening1                ErrorNumber_NotListening
+#define ErrorString_NotListening1                "Station "
+#define ErrorNumber_NotListening2                ErrorNumber_NotListening
+#define ErrorString_NotListening2                " not listening"
+#define ErrorNumber_NoClock                      0x3A3
+#define ErrorString_NoClock                      "No clock"
+#define ErrorNumber_NoReply                      0x3A5
+#define ErrorString_NoReply                      "No reply"
+#define ErrorNumber_NoReply1                     ErrorNumber_NoReply
+#define ErrorString_NoReply1                     "No reply from station "
+#define ErrorNumber_NoReply2                     ErrorNumber_NoReply
+#define ErrorString_NoReply2                     ""
+#define ErrorNumber_BadEconetHandle              0x3DE
+#define ErrorString_BadEconetHandle              "Bad handle"
+#define ErrorNumber_NetError1                    ErrorNumber_NetError
+#define ErrorString_NetError1                    "Net error 1"
+#define ErrorNumber_NetError2                    ErrorNumber_NetError
+#define ErrorString_NetError2                    "Net error 2"
+#define ErrorNumber_NetError3                    ErrorNumber_NetError
+#define ErrorString_NetError3                    "Net error 3"
+#define ErrorNumber_FileSwitchNoClaim            0x400
+#define ErrorString_FileSwitchNoClaim            "Unable to claim FileSwitch workspace"
+#define ErrorNumber_BadFSControlReason           0x401
+#define ErrorString_BadFSControlReason           "Bad FSControl call"
+#define ErrorNumber_BadOSFileReason              0x402
+#define ErrorString_BadOSFileReason              "Bad OSFile call"
+#define ErrorNumber_BadOSArgsReason              0x403
+#define ErrorString_BadOSArgsReason              "Bad OSArgs call"
+#define ErrorNumber_BadOSGBPBReason              0x404
+#define ErrorString_BadOSGBPBReason              "Bad OSGBPB call"
+#define ErrorNumber_BadModeForOSFind             0x405
+#define ErrorString_BadModeForOSFind             "Bad mode for OSFind"
+#define ErrorNumber_NoRoomForTransient           0x406
+#define ErrorString_NoRoomForTransient           "No room to run transient"
+#define ErrorNumber_ExecAddrNotInCode            0x407
+#define ErrorString_ExecAddrNotInCode            "Execution address not within code"
+#define ErrorNumber_ExecAddrTooLow               0x408
+#define ErrorString_ExecAddrTooLow               "Code runs too low"
+#define ErrorNumber_UnknownActionType            0x409
+#define ErrorString_UnknownActionType            "No action specified for this file type"
+#define ErrorNumber_TooManyLevels                0x40a
+#define ErrorString_TooManyLevels                "Too many levels"
+#define ErrorNumber_NoSelectedFilingSystem       0x40b
+#define ErrorString_NoSelectedFilingSystem       "No selected filing system"
+#define ErrorNumber_CantRemoveFSByNumber         0x40c
+#define ErrorString_CantRemoveFSByNumber         "Can't remove filing system by number"
+#define ErrorNumber_UnalignedFSEntry             0x40d
+#define ErrorString_UnalignedFSEntry             "Unaligned filing system entry point"
+#define ErrorNumber_UnsupportedFSEntry           0x40e
+#define ErrorString_UnsupportedFSEntry           "Filing system does not support this operation"
+#define ErrorNumber_FSNotSpecial                 0x40f
+#define ErrorString_FSNotSpecial                 "Filing system does not support special fields"
+#define ErrorNumber_CoreNotReadable              0x410
+#define ErrorString_CoreNotReadable              "No readable memory at this address"
+#define ErrorNumber_CoreNotWriteable             0x411
+#define ErrorString_CoreNotWriteable             "No writable memory at this address"
+#define ErrorNumber_BadBufferSizeForStream       0x412
+#define ErrorString_BadBufferSizeForStream       "Bad buffer size"
+#define ErrorNumber_NotOpenForReading            0x413
+#define ErrorString_NotOpenForReading            "Not open for reading"
+#define ErrorNumber_NotEnoughStackForFSEntry     0x414
+#define ErrorString_NotEnoughStackForFSEntry     "Not enough stack to call filing system"
+#define ErrorNumber_NothingToCopy                0x415
+#define ErrorString_NothingToCopy                "Nothing to copy"
+#define ErrorNumber_NothingToDelete              0x416
+#define ErrorString_NothingToDelete              "Nothing to delete"
+#define ErrorNumber_FileSwitchCantBeKilledWhilstThreaded 0x417
+#define ErrorString_FileSwitchCantBeKilledWhilstThreaded "FileSwitch can not be killed whilst it is threaded"
+#define ErrorNumber_InvalidErrorBlock            0x418
+#define ErrorString_InvalidErrorBlock            "Invalid error block"
+#define ErrorNumber_FSFileTooBig                 0x419
+#define ErrorString_FSFileTooBig                 "File too big"
+#define ErrorNumber_CantRMFasterFileSwitch       0x41a
+#define ErrorString_CantRMFasterFileSwitch       "Can't RMFaster FileSwitch"
+#define ErrorNumber_InconsistentHandleSet        0x41b
+#define ErrorString_InconsistentHandleSet        "Inconsistent handle set"
+#define ErrorNumber_IsAFile                      0x41c
+#define ErrorString_IsAFile                      "Object is a file"
+#define ErrorNumber_BadFileType                  0x41d
+#define ErrorString_BadFileType                  "Bad file type"
+#define ErrorNumber_LibrarySomewhereElse         0x41e
+#define ErrorString_LibrarySomewhereElse         "The library is somewhere else"
+#define ErrorNumber_PathIsSelfContradictory      0x41f
+#define ErrorString_PathIsSelfContradictory      "Path is self contradictory"
+#define ErrorNumber_WasntDollarAfterDisc         0x420
+#define ErrorString_WasntDollarAfterDisc         "Disc was specified, but absolute wasn't $"
+#define ErrorNumber_NotEnoughMemoryForWildcardResolution 0x421
+#define ErrorString_NotEnoughMemoryForWildcardResolution "Not enough memory for wildcard resolution"
+#define ErrorNumber_NotEnoughStackForWildcardResolution 0x422
+#define ErrorString_NotEnoughStackForWildcardResolution "Not enough stack for wildcard resolution"
+#define ErrorNumber_DirectoryWantedFileFound     0x423
+#define ErrorString_DirectoryWantedFileFound     "Directory wanted, but file found"
+#define ErrorNumber_NotFound                     0x0100D6
+#define ErrorString_NotFound                     "Not found"
+#define ErrorNumber_MultipartPathUsed            0x424
+#define ErrorString_MultipartPathUsed            "Path variable had multiple entries and was used for a write operation"
+#define ErrorNumber_RecursivePath                0x425
+#define ErrorString_RecursivePath                "One of the path variables used refers to itself"
+#define ErrorNumber_MultiFSDoesNotSupportGBPB11  0x426
+#define ErrorString_MultiFSDoesNotSupportGBPB11  "The OS_GBPB 11 call is not supported by image filing systems"
+#define ErrorNumber_FileSwitchDataLost           0x4AC
+#define ErrorString_FileSwitchDataLost           "Data lost"
+#define ErrorNumber_TooManyErrorLookups          0x427
+#define ErrorString_TooManyErrorLookups          "Too many error lookups happening at once - recursion assumed"
+#define ErrorNumber_MessageFileBusy              0x428
+#define ErrorString_MessageFileBusy              "FileSwitch message file busy"
+#define ErrorNumber_PartitionBusy                0x429
+#define ErrorString_PartitionBusy                "Partition not ready"
+#define ErrorNumber_NotSupported_Pre             1272
+#define ErrorString_NotSupported_Pre             "Bad operation on "
+#define ErrorNumber_NotSupported_Post            0x4f8
+#define ErrorString_NotSupported_Post            ":"
+#define ErrorNumber_FSWriteOnly_Pre              1273
+#define ErrorString_FSWriteOnly_Pre              ""
+#define ErrorNumber_FSWriteOnly_Post             0x4f9
+#define ErrorString_FSWriteOnly_Post             ": is a write only filing system"
+#define ErrorNumber_FSReadOnly_Pre               1274
+#define ErrorString_FSReadOnly_Pre               ""
+#define ErrorNumber_FSReadOnly_Post              0x4fa
+#define ErrorString_FSReadOnly_Post              ": is a read only filing system"
+#define ErrorNumber_BadPod                       0x500
+#define ErrorString_BadPod                       "Bad expansion card identifier"
+#define ErrorNumber_BadSpeed                     0x501
+#define ErrorString_BadSpeed                     "Bad access speed"
+#define ErrorNumber_NoPod                        0x502
+#define ErrorString_NoPod                        "No installed expansion card"
+#define ErrorNumber_NotExt                       0x503
+#define ErrorString_NotExt                       "Expansion card identity is not extended"
+#define ErrorNumber_NotAcrn                      0x504
+#define ErrorString_NotAcrn                      "Expansion card is not Acorn conformant"
+#define ErrorNumber_NoLdr                        0x505
+#define ErrorString_NoLdr                        "No loader to call"
+#define ErrorNumber_InLdr                        0x506
+#define ErrorString_InLdr                        "Unknown error in loader"
+#define ErrorNumber_BadChnk                      0x507
+#define ErrorString_BadChnk                      "Bad chunk number"
+#define ErrorNumber_BadDeviceNumber              0x508
+#define ErrorString_BadDeviceNumber              "Bad device number"
+#define ErrorNumber_BadDeviceType                0x509
+#define ErrorString_BadDeviceType                "Bad device type"
+#define ErrorNumber_RAMConfigSyntax              ErrorNumber_Syntax
+#define ErrorString_RAMConfigSyntax              "Syntax: *RAMConfig <expansion card number> [<device> [<type>]]"
+#define ErrorNumber_WrongPoduleType              0x50a
+#define ErrorString_WrongPoduleType              "Wrong expansion card type"
+#define ErrorNumber_ROMBoardSyntax               ErrorNumber_Syntax
+#define ErrorString_ROMBoardSyntax               "Syntax: *Configure ROMBoard <expansion card> <device> [<type>]"
+#define ErrorNumber_BadRead                      0x50b
+#define ErrorString_BadRead                      "Unknown bit set in ReadInfo"
+#define ErrorNumber_BdSpeed                      0x50c
+#define ErrorString_BdSpeed                      "Unknown value for speed setting"
+#define ErrorNumber_NotEASI                      0x50d
+#define ErrorString_NotEASI                      "This expansion card has no EASI space"
+#define ErrorNumber_SpeedNo                      0x50e
+#define ErrorString_SpeedNo                      "Requested speed setting not available for this expansion card"
+#define ErrorNumber_ECNoSpd                      0x50f
+#define ErrorString_ECNoSpd                      "This expansion card does not suport speed setting"
+#define ErrorNumber_ECNoNet                      0x510
+#define ErrorString_ECNoNet                      "This expansion card may not use the Ethernet address"
+#define ErrorNumber_NDallas                      0x511
+#define ErrorString_NDallas                      "This computer can't provide a valid Ethernet address"
+#define ErrorNumber_Ldr26                        0x512
+#define ErrorString_Ldr26                        "Loader is not 32-bit compatible"
+#define ErrorNumber_NotWriteable                 0x580
+#define ErrorString_NotWriteable                 "This expansion card doesn't support writable devices"
+#define ErrorNumber_AddressRange                 0x581
+#define ErrorString_AddressRange                 "Address out of range for expansion card"
+#define ErrorNumber_DeviceNotWriteable           0x582
+#define ErrorString_DeviceNotWriteable           "This device not writable"
+#define ErrorNumber_PoduleReadOnly               0x583
+#define ErrorString_PoduleReadOnly               "Read only device"
+#define ErrorNumber_AddressTooBig                0x584
+#define ErrorString_AddressTooBig                "Address too big"
+#define ErrorNumber_PrintBadFeatures             0x5c0
+#define ErrorString_PrintBadFeatures             "This printer driver lacks the requested features"
+#define ErrorNumber_PrintNoCurrentSprite         0x5c1
+#define ErrorString_PrintNoCurrentSprite         "No sprite selected in this print job"
+#define ErrorNumber_PrintNoJobSelected           0x5c2
+#define ErrorString_PrintNoJobSelected           "No current print job"
+#define ErrorNumber_PrintNoSuchJob               0x5c3
+#define ErrorString_PrintNoSuchJob               "Requested print job doesn't exist"
+#define ErrorNumber_PrintNoCurrentPage           0x5c4
+#define ErrorString_PrintNoCurrentPage           "Not printing a page"
+#define ErrorNumber_PrintPrintingPage            0x5c5
+#define ErrorString_PrintPrintingPage            "Page currently being printed"
+#define ErrorNumber_PrintInvalidCopies           0x5c6
+#define ErrorString_PrintInvalidCopies           "Invalid number of copies requested"
+#define ErrorNumber_PrintCannotHandle            0x5c7
+#define ErrorString_PrintCannotHandle            "Requested operation invalid for printer drivers"
+#define ErrorNumber_PrintBadHalftone             0x5c8
+#define ErrorString_PrintBadHalftone             "Requested halftone size too big"
+#define ErrorNumber_PrintCancelled               0x5c9
+#define ErrorString_PrintCancelled               "Print cancelled"
+#define ErrorNumber_PrintSingularMatrix          0x5ca
+#define ErrorString_PrintSingularMatrix          "Transformation matrix is singular"
+#define ErrorNumber_PrintBadRectangle            0x5cb
+#define ErrorString_PrintBadRectangle            "Print area coordinates too large"
+#define ErrorNumber_PrintRectanglesMiss          0x5cc
+#define ErrorString_PrintRectanglesMiss          "Nothing to print"
+#define ErrorNumber_PrintNoFreeMemory            0x5cd
+#define ErrorString_PrintNoFreeMemory            "Not enough free memory"
+#define ErrorNumber_PrintNotOnePage              0x5ce
+#define ErrorString_PrintNotOnePage              "Print job doesn't contain exactly one page"
+#define ErrorNumber_PrintInUse                   0x5cf
+#define ErrorString_PrintInUse                   "PDriver in use"
+#define ErrorNumber_PrintOverflow                0x5d0
+#define ErrorString_PrintOverflow                "Buffer overflow"
+#define ErrorNumber_PrintBadMiscOp               0x5d1
+#define ErrorString_PrintBadMiscOp               "Unknown call to MiscOp"
+#define ErrorNumber_PrintNoDuplicates            0x5d2
+#define ErrorString_PrintNoDuplicates            "Font name already registered"
+#define ErrorNumber_PrintNoColour                ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintNoColour                "This printer driver only drives monochrome printers"
+#define ErrorNumber_PrintColourNotConfig         ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintColourNotConfig         "Printer driver not configured for colour output"
+#define ErrorNumber_PrintNotFullColour           ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintNotFullColour           "This printer driver doesn't support the full colour range"
+#define ErrorNumber_PrintDiscreteColours         ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintDiscreteColours         "This printer driver only supports a discrete set of colours"
+#define ErrorNumber_PrintBadFills                ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintBadFills                "This printer driver doesn't support filled shapes"
+#define ErrorNumber_PrintBadThickLines           ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintBadThickLines           "This printer driver doesn't support thick lines"
+#define ErrorNumber_PrintNoOverwrite             ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintNoOverwrite             "This printer driver doesn't support overwriting"
+#define ErrorNumber_PrintNoScreenDump            ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintNoScreenDump            "This printer driver cannot do screen dumps"
+#define ErrorNumber_PrintBadTransform            ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintBadTransform            "This printer driver cannot do arbitrary transformations"
+#define ErrorNumber_PrintNoIncludedFiles         ErrorNumber_PrintBadFeatures
+#define ErrorString_PrintNoIncludedFiles         "This printer driver is unable to insert illustration files"
+#define ErrorNumber_PrintNoCurrentDriver         0x5d3
+#define ErrorString_PrintNoCurrentDriver         "No current printer driver selected"
+#define ErrorNumber_PrintUnknownNumber           0x5d4
+#define ErrorString_PrintUnknownNumber           "Desired printer driver not present"
+#define ErrorNumber_PrintDuplicateNumber         0x5d5
+#define ErrorString_PrintDuplicateNumber         "Printer number already used"
+#define ErrorNumber_PrintBadSetPrinter           0x5d6
+#define ErrorString_PrintBadSetPrinter           "This printer driver does not support PDriver_SetPrinter"
+#define ErrorNumber_PDumperUndeclared            0x5d7
+#define ErrorString_PDumperUndeclared            "PDumperXX module has not been declared"
+#define ErrorNumber_PDumperTooOld                0x5d8
+#define ErrorString_PDumperTooOld                "PDumper module is too old for declaring PDumperXX module"
+#define ErrorNumber_PDumperDuplicateModule       0x5d9
+#define ErrorString_PDumperDuplicateModule       "PDumperXX number already used"
+#define ErrorNumber_PDumperBadCall               0x5da
+#define ErrorString_PDumperBadCall               "Bad call to PDumperXX module"
+#define ErrorNumber_PDumperBadStrip              0x5db
+#define ErrorString_PDumperBadStrip              "Bad strip type specified to PDumperXX module"
+#define ErrorNumber_PDumperBadPalette            0x5dc
+#define ErrorString_PDumperBadPalette            "Cannot open palette file"
+#define ErrorNumber_PDumperNotLinked             0x5dd
+#define ErrorString_PDumperNotLinked             "Block not linked to specified anchor word"
+#define ErrorNumber_PDumperReserved              0x5de
+#define ErrorString_PDumperReserved              "Reserved fields must be zero"
+#define ErrorNumber_PDumperBadOutputType         0x5df
+#define ErrorString_PDumperBadOutputType         "Bad output type specified"
+#define ErrorNumber_PDumperBlockNotFound         0x5e0
+#define ErrorString_PDumperBlockNotFound         "Block not found"
+#define ErrorNumber_PDumperInUse                 0x5e1
+#define ErrorString_PDumperInUse                 "PDumper in use"
+#define ErrorNumber_PrintCantPrinterVDU          ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantPrinterVDU          "Printer drivers cannot handle VDU printer sequences (VDU 1 and 2)"
+#define ErrorNumber_PrintCantVDU4                ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantVDU4                "Printer drivers cannot handle VDU 4 characters"
+#define ErrorNumber_PrintCantModeChange          ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantModeChange          "Printer drivers cannot handle mode changes"
+#define ErrorNumber_PrintCantThisVDU23           ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantThisVDU23           "Printer drivers cannot handle the specified VDU 23 sequence"
+#define ErrorNumber_PrintCantHorizFill           ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantHorizFill           "Printer drivers cannot handle horizontal line fills"
+#define ErrorNumber_PrintCantFloodFill           ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantFloodFill           "Printer drivers cannot handle flood fills"
+#define ErrorNumber_PrintCantCopyMove            ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantCopyMove            "Printer drivers cannot handle block copy/moves"
+#define ErrorNumber_PrintCantUndefPlot           ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantUndefPlot           "Printer drivers cannot handle undefined plots"
+#define ErrorNumber_PrintCantFontSpriteVDU       ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantFontSpriteVDU       "Printer drivers cannot handle font and sprite VDU sequences"
+#define ErrorNumber_PrintCantUnkColV             ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantUnkColV             "Printer drivers cannot handle unknown ColourV reason codes"
+#define ErrorNumber_PrintCantDrawPlot            ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantDrawPlot            "Printer drivers cannot handle Draw_ProcessPath plotting calls"
+#define ErrorNumber_PrintCantThisFill            ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantThisFill            "Printer drivers cannot handle the requested fill style"
+#define ErrorNumber_PrintCantUnkSpriteOp         ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantUnkSpriteOp         "Printer drivers cannot handle unknown OS_SpriteOp reason codes"
+#define ErrorNumber_PrintCantThisSpriteOp        ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantThisSpriteOp        "Printer drivers cannot handle the requested OS_SpriteOp reason code"
+#define ErrorNumber_PrintCantThisFontPaint       ErrorNumber_PrintCannotHandle
+#define ErrorString_PrintCantThisFontPaint       "Printer drivers cannot handle the requested Font_Paint control sequence"
+#define ErrorNumber_PrintJPEGNoSupp              0x5e2
+#define ErrorString_PrintJPEGNoSupp              "Printer drivers cannot handle JPEG plots from file"
+#define ErrorNumber_PrintJPEGOldSprEx            0x5e3
+#define ErrorString_PrintJPEGOldSprEx            "Printing JPEG requires newer SpriteExtend module"
+#define ErrorNumber_PDumperEscDisabled           0x5e4
+#define ErrorString_PDumperEscDisabled           "PDumper module called with escape disabled"
+#define ErrorNumber_CantStartApplication         0x600
+#define ErrorString_CantStartApplication         "Unable to start application"
+#define ErrorNumber_BadCommandOption             0x601
+#define ErrorString_BadCommandOption             "Bad command option"
+#define ErrorNumber_UnknownSerialOp              0x602
+#define ErrorString_UnknownSerialOp              "Unknown serial operation"
+#define ErrorNumber_BadHard                      0x603
+#define ErrorString_BadHard                      "BadHard"
+#define ErrorNumber_TooComplex                   0x604
+#define ErrorString_TooComplex                   "TooComplex:Transfer too complex"
+#define ErrorNumber_UnknownAlphabet              0x640
+#define ErrorString_UnknownAlphabet              "Unknown alphabet"
+#define ErrorNumber_UnknownCountry               0x641
+#define ErrorString_UnknownCountry               "Unknown country"
+#define ErrorNumber_UnknownKeyboard              0x642
+#define ErrorString_UnknownKeyboard              "Unknown keyboard"
+#define ErrorNumber_Sprite_NoWorkSpace           128
+#define ErrorString_Sprite_NoWorkSpace           "SNoWorkSpace:No sprite memory"
+#define ErrorNumber_Sprite_NoRoom                130
+#define ErrorString_Sprite_NoRoom                "SNoRoom:No room to get sprite"
+#define ErrorNumber_Sprite_DoesntExist           134
+#define ErrorString_Sprite_DoesntExist           "SDoesntExist:Sprite doesn't exist"
+#define ErrorNumber_Sprite_NoSprites             131
+#define ErrorString_Sprite_NoSprites             "NoSprites:No sprites"
+#define ErrorNumber_Sprite_NotGraphics           129
+#define ErrorString_Sprite_NotGraphics           "NotGraphics:Not a graphics mode"
+#define ErrorNumber_Sprite_NotEnoughRoom         133
+#define ErrorString_Sprite_NotEnoughRoom         "SNotEnoughRoom:Not enough room"
+#define ErrorNumber_Sprite_BadSpriteFile         0x700
+#define ErrorString_Sprite_BadSpriteFile         "SBadSpriteFile:Bad sprite file"
+#define ErrorNumber_Sprite_NoRoomToMerge         0x701
+#define ErrorString_Sprite_NoRoomToMerge         "SNoRoomToMerge:Not enough room to add sprite"
+#define ErrorNumber_Sprite_Bad2ndPtr             0x702
+#define ErrorString_Sprite_Bad2ndPtr             "SBad2ndPtr:Bad 2nd ptr"
+#define ErrorNumber_Sprite_InvalidRowOrCol       0x703
+#define ErrorString_Sprite_InvalidRowOrCol       "InvalidRowOrCol:Invalid row or column"
+#define ErrorNumber_Sprite_InvalidHeight         0x704
+#define ErrorString_Sprite_InvalidHeight         "InvalidHeight:Invalid height"
+#define ErrorNumber_Sprite_InvalidWidth          0x705
+#define ErrorString_Sprite_InvalidWidth          "InvalidWidth:Invalid width"
+#define ErrorNumber_Sprite_NoRoomToInsert        0x706
+#define ErrorString_Sprite_NoRoomToInsert        "NoRoomToInsert:Not enough memory to insert sprite row or column"
+#define ErrorNumber_Sprite_SpriteAlreadyExists   0x707
+#define ErrorString_Sprite_SpriteAlreadyExists   "SpriteAlreadyExists:Sprite already exists"
+#define ErrorNumber_Sprite_InvalidSpriteMode     0x708
+#define ErrorString_Sprite_InvalidSpriteMode     "InvalidSpriteMode:Invalid sprite mode"
+#define ErrorNumber_Sprite_BadReasonCode         0x709
+#define ErrorString_Sprite_BadReasonCode         "SBadReasonCode:Bad sprite reason code"
+#define ErrorNumber_Sprite_CantDoSystem          0x70a
+#define ErrorString_Sprite_CantDoSystem          "System sprites not allowed here"
+#define ErrorNumber_Sprite_BadTranslation        0x70b
+#define ErrorString_Sprite_BadTranslation        "Bad colour translation table"
+#define ErrorNumber_Sprite_BadGreyScale          0x70c
+#define ErrorString_Sprite_BadGreyScale          "Grey-scale only does 16 colours"
+#define ErrorNumber_Sprite_BadPointerShape       0x70d
+#define ErrorString_Sprite_BadPointerShape       "Unsuitable sprite for SetPointerShape"
+#define ErrorNumber_Sprite_BadAppend             0x70e
+#define ErrorString_Sprite_BadAppend             "Can't append sprite"
+#define ErrorNumber_Sprite_CantInTeletext        0x70f
+#define ErrorString_Sprite_CantInTeletext        "CantInTeletext:Can't switch output in teletext mode"
+#define ErrorNumber_Sprite_InvalidSaveArea       0x710
+#define ErrorString_Sprite_InvalidSaveArea       "SInvalidSaveArea:Invalid save area"
+#define ErrorNumber_Sprite_SpriteIsCurrentDest   0x711
+#define ErrorString_Sprite_SpriteIsCurrentDest   "SpriteIsCurrentDest:Sprite is current destination"
+#define ErrorNumber_Sprite_BadFlags              0x712
+#define ErrorString_Sprite_BadFlags              "Attempt to set reserved flags"
+#define ErrorNumber_Sprite_BadCoordBlock         0x713
+#define ErrorString_Sprite_BadCoordBlock         "Source rectangle not inside sprite"
+#define ErrorNumber_Sprite_BadSourceRectangle    0x714
+#define ErrorString_Sprite_BadSourceRectangle    "Source rectangle area zero"
+#define ErrorNumber_Sprite_BadTransformation     0x715
+#define ErrorString_Sprite_BadTransformation     "SpriteExtend can only do linear transformations"
+#define ErrorNumber_Sprite_BadDepth              0x716
+#define ErrorString_Sprite_BadDepth              "Unable to plot sprites of this format"
+#define ErrorNumber_Sprite_BadSwitchDepth        0x717
+#define ErrorString_Sprite_BadSwitchDepth        "Cannot switch output to sprites of this format"
+#define ErrorNumber_Sprite_NoMaskOrPaletteAllowedInThisDepth 0x718
+#define ErrorString_Sprite_NoMaskOrPaletteAllowedInThisDepth "SNoMask:Mask or palette operations not supported in this display depth"
+#define ErrorNumber_Sprite_BadDPI                0x719
+#define ErrorString_Sprite_BadDPI                "BadDPI:Illegal XDPI or YDPI in sprite"
+#define ErrorNumber_Sprite_BadJPEG               0x71a
+#define ErrorString_Sprite_BadJPEG               "Incomplete or corrupt JPEG data"
+#define ErrorNumber_Sprite_BadJPEGPlot           0x71b
+#define ErrorString_Sprite_BadJPEGPlot           "Transformed JPEG plotting is not supported by this version of the SpriteExtend module"
+#define ErrorNumber_Sprite_JPEGNoRoom            0x71c
+#define ErrorString_Sprite_JPEGNoRoom            "Not enough memory available to plot JPEG"
+#define ErrorNumber_Sprite_JPEGFatal             0x71d
+#define ErrorString_Sprite_JPEGFatal             "JPEG plot failed due to fatal inconsistency"
+#define ErrorNumber_Sprite_BadData               0x71e
+#define ErrorString_Sprite_BadData               "Unrecognised sprite data"
+#define ErrorNumber_Sprite_NoGrScl               0x71f
+#define ErrorString_Sprite_NoGrScl               "Operation 'PutSpriteGreyScaled' is not supported by this version of the SpriteExtend module"
+#define ErrorNumber_Sprite_BadColourMap          0x720
+#define ErrorString_Sprite_BadColourMap          "Bad colour map"
+#define ErrorNumber_Sprite_BadJPEGUnsupported    0x721
+#define ErrorString_Sprite_BadJPEGUnsupported    "JPEG format is not supported by this version of the SpriteExtend module"
+#define ErrorNumber_Sprite_BadJPEGProgressive    0x722
+#define ErrorString_Sprite_BadJPEGProgressive    "Progressive JPEG rendering failed due to an internal error"
+#define ErrorNumber_Sprite_BadType               0x723
+#define ErrorString_Sprite_BadType               "Sprite type is not supported by this version of the SpriteExtend module"
+#define ErrorNumber_Debug_BreakNotFound          0x800
+#define ErrorString_Debug_BreakNotFound          "Breakpoint not found"
+#define ErrorNumber_Debug_InvalidValue           0x801
+#define ErrorString_Debug_InvalidValue           "Invalid value"
+#define ErrorNumber_Debug_Resetting              0x802
+#define ErrorString_Debug_Resetting              "Resetting breakpoint"
+#define ErrorNumber_Debug_NoRoom                 0x803
+#define ErrorString_Debug_NoRoom                 "No room in breakpoint table"
+#define ErrorNumber_Debug_NoBreakpoints          0x804
+#define ErrorString_Debug_NoBreakpoints          "No breakpoints set"
+#define ErrorNumber_Debug_BadBreakpoint          0x805
+#define ErrorString_Debug_BadBreakpoint          "Bad breakpoint"
+#define ErrorNumber_Debug_Undefined              0x806
+#define ErrorString_Debug_Undefined              "Undefined breakpoint"
+#define ErrorNumber_Debug_NonAligned             0x807
+#define ErrorString_Debug_NonAligned             "Unaligned address"
+#define ErrorNumber_Debug_NoWorkspace            0x808
+#define ErrorString_Debug_NoWorkspace            "No room for debug module workspace"
+#define ErrorNumber_DDT_UnknownSWI               0x840
+#define ErrorString_DDT_UnknownSWI               "Unknown Debugger SWI"
+#define ErrorNumber_DDT_StackOverflow            0x841
+#define ErrorString_DDT_StackOverflow            "Stack overflow in Debugger"
+#define ErrorNumber_DDT_BadDebugData             0x842
+#define ErrorString_DDT_BadDebugData             "Badly formatted debugging tables"
+#define ErrorNumber_DDT_Exception                0x843
+#define ErrorString_DDT_Exception                "Exception in debugger, registers at 01234567"
+#define ErrorNumber_DDT_DivZero                  0x844
+#define ErrorString_DDT_DivZero                  "Divide by zero in debugger"
+#define ErrorNumber_DDT_IllegalRead              0x845
+#define ErrorString_DDT_IllegalRead              "Illegal address read in debugger, PC = 01234567"
+#define ErrorNumber_DDT_IllegalWrite             0x846
+#define ErrorString_DDT_IllegalWrite             "Illegal address write in debugger, PC = 01234567"
+#define ErrorNumber_DDT_BadFileType              0x847
+#define ErrorString_DDT_BadFileType              "Can't debug files of this type"
+#define ErrorNumber_DDT_Unused1                  0x848
+#define ErrorString_DDT_Unused1                  ""
+#define ErrorNumber_DDT_MultipleDebug            0x849
+#define ErrorString_DDT_MultipleDebug            "Debugging session already in progress"
+#define ErrorNumber_DDT_NoFP                     0x84a
+#define ErrorString_DDT_NoFP                     "FPEmulator module not loaded"
+#define ErrorNumber_DDT_NoColours                0x84b
+#define ErrorString_DDT_NoColours                "Colours module not loaded"
+#define ErrorNumber_DDT_NoWRCHVRoutine           0x84c
+#define ErrorString_DDT_NoWRCHVRoutine           "DDT: Unable to find default WRCHV routine"
+#define ErrorNumber_DDT_NoByteVRoutine           0x84d
+#define ErrorString_DDT_NoByteVRoutine           "DDT: Unable to find default ByteV routine"
+#define ErrorNumber_DDT_NoVectorTable            0x84e
+#define ErrorString_DDT_NoVectorTable            "DDT: Unable to find ROM vector table"
+#define ErrorNumber_DDT_BadSprite                0x84f
+#define ErrorString_DDT_BadSprite                "DDT: 256 colour sprite"
+#define ErrorNumber_DDT_OldFormatWindow          0x850
+#define ErrorString_DDT_OldFormatWindow          "DDT: Old format window"
+#define ErrorNumber_DDT_NoTemplate               0x851
+#define ErrorString_DDT_NoTemplate               "DDT: Template not found"
+#define ErrorNumber_DDT_TooManyMenus             0x852
+#define ErrorString_DDT_TooManyMenus             "DDT: Too many menus"
+#define ErrorNumber_NoHardwareAddress            0x880
+#define ErrorString_NoHardwareAddress            "Unable to start without hardware address"
+#define ErrorNumber_ShellCreation                0x900
+#define ErrorString_ShellCreation                "Cannot create a new shell"
+#define ErrorNumber_ShellRemoval                 0x901
+#define ErrorString_ShellRemoval                 "Cannot remove current shell"
+#define EFormatUtilsErrors                       (0x910)
+#define CompressErrors                           (0x920)
+#define ErrorNumber_NoDrawInIRQMode              0x980
+#define ErrorString_NoDrawInIRQMode              "Draw module does not work in IRQ mode"
+#define ErrorNumber_BadDrawReasonCode            0x981
+#define ErrorString_BadDrawReasonCode            "Bad Draw_ProcessPath reason code"
+#define ErrorNumber_ReservedDrawBits             0x982
+#define ErrorString_ReservedDrawBits             "Reserved bits not zero"
+#define ErrorNumber_InvalidDrawAddress           0x983
+#define ErrorString_InvalidDrawAddress           "Invalid address"
+#define ErrorNumber_BadPathElement               0x984
+#define ErrorString_BadPathElement               "Bad path element"
+#define ErrorNumber_BadPathSequence              0x985
+#define ErrorString_BadPathSequence              "Path elements out of order"
+#define ErrorNumber_MayExpandPath                0x986
+#define ErrorString_MayExpandPath                "Operation may change path length"
+#define ErrorNumber_PathFull                     0x987
+#define ErrorString_PathFull                     "Output path full"
+#define ErrorNumber_PathNotFlat                  0x988
+#define ErrorString_PathNotFlat                  "Path needs to be flattened"
+#define ErrorNumber_BadCapsOrJoins               0x989
+#define ErrorString_BadCapsOrJoins               "Invalid cap and join specification"
+#define ErrorNumber_TransformOverflow            0x98a
+#define ErrorString_TransformOverflow            "Overflow while transforming point"
+#define ErrorNumber_DrawNeedsGraphicsMode        0x98b
+#define ErrorString_DrawNeedsGraphicsMode        "Draw can only plot to graphics modes"
+#define ErrorNumber_NoSuchDrawSWI                ErrorNumber_NoSuchSWI
+#define ErrorString_NoSuchDrawSWI                "No such Draw SWI"
+#define ErrorNumber_UnimplementedDraw            0x9ff
+#define ErrorString_UnimplementedDraw            "Facility not in this version of Draw"
+#define ErrorNumber_CTBadCalib                   0xa00
+#define ErrorString_CTBadCalib                   "Bad calibration table"
+#define ErrorNumber_CTConvOver                   0xa01
+#define ErrorString_CTConvOver                   "Overflow in conversion"
+#define ErrorNumber_CTBadHSV                     0xa02
+#define ErrorString_CTBadHSV                     "Hue should be undefined in achromatic colours"
+#define ErrorNumber_CTSwitched                   0xa03
+#define ErrorString_CTSwitched                   "Not whilst output switched to sprite"
+#define ErrorNumber_CTBadMiscOp                  0xa04
+#define ErrorString_CTBadMiscOp                  "Unknown MiscOp call"
+#define ErrorNumber_CTBadFlags                   0xa05
+#define ErrorString_CTBadFlags                   "Reserved fields must be zero"
+#define ErrorNumber_CTBuffOver                   0xa06
+#define ErrorString_CTBuffOver                   "Buffer too small to read palette into"
+#define ErrorNumber_CTBadDepth                   0xa07
+#define ErrorString_CTBadDepth                   "Not supported in this display depth"
+#define ErrorNumber_ARM3NotPresent               0xa40
+#define ErrorString_ARM3NotPresent               "ARM3 not present"
+#define ErrorNumber_UnknownCacheSWI              0xa41
+#define ErrorString_UnknownCacheSWI              "Unknown cache SWI number"
+#define ErrorNumber_TaskWindow_CantKill          0xa80
+#define ErrorString_TaskWindow_CantKill          "A task window is still active"
+#define ErrorNumber_TaskWindow_BadSWIEntry       0xa81
+#define ErrorString_TaskWindow_BadSWIEntry       "Can't restore SWI table properly"
+#define ErrorNumber_TaskWindow_BadTaskHandle     0xa82
+#define ErrorString_TaskWindow_BadTaskHandle     "Bad task or text handle"
+#define ErrorNumber_TaskWindow_Dying             0xa83
+#define ErrorString_TaskWindow_Dying             "Task dying"
+#define ErrorNumber_TaskWindow_FileSleep         0xa84
+#define ErrorString_TaskWindow_FileSleep         "You can't close that file - a task window is waiting for it"
+#define ErrorNumber_TaskWindow_NoEditor          0xa85
+#define ErrorString_TaskWindow_NoEditor          "Can't open task window - is !Edit loaded?"
+#define ErrorNumber_TaskWindow_NoRedirection     0xa86
+#define ErrorString_TaskWindow_NoRedirection     "Kernel does not support OS_ChangeRedirection"
+#define ErrorNumber_MessageTrans_Syntax          0xac0
+#define ErrorString_MessageTrans_Syntax          "Syntax"
+#define ErrorNumber_MessageTrans_FileOpen        0xac1
+#define ErrorString_MessageTrans_FileOpen        "FilOpen"
+#define ErrorNumber_MessageTrans_TokenNotFound   0xac2
+#define ErrorString_MessageTrans_TokenNotFound   "TokNFnd"
+#define ErrorNumber_MessageTrans_Recurse         0xac3
+#define ErrorString_MessageTrans_Recurse         "Recursion in MessageTrans"
+#define ErrorNumber_MessageTrans_BadDesc         0xac4
+#define ErrorString_MessageTrans_BadDesc         "BadDesc"
+#define ErrorNumber_Pinboard_BadOptions          0xb00
+#define ErrorString_Pinboard_BadOptions          "BadOpts"
+#define ErrorNumber_Pinboard_NotASprite          0xb01
+#define ErrorString_Pinboard_NotASprite          "NotSprt"
+#define ErrorNumber_Pinboard_NoRoom              0xb02
+#define ErrorString_Pinboard_NoRoom              "NoRoom"
+#define ErrorNumber_Pinboard_CopyRecursive       0xb03
+#define ErrorString_Pinboard_CopyRecursive       "CopyR"
+#define ErrorNumber_Pinboard_NoWimp              0xb04
+#define ErrorString_Pinboard_NoWimp              "NoWimp"
+#define ErrorBase_Portable                       (0xb40)
+#define ErrorNumber_Filer_NoRecursion            0xb80
+#define ErrorString_Filer_NoRecursion            "NoRecur"
+#define ErrorNumber_Filer_NoTemplate             0xb81
+#define ErrorString_Filer_NoTemplate             "NoTempl"
+#define ErrorNumber_Filer_FailedSave             0xb82
+#define ErrorString_Filer_FailedSave             "BadSave"
+#define ErrorNumber_Filer_BadPath                0xb83
+#define ErrorString_Filer_BadPath                "BadPath"
+#define ErrorBase_Modes                          (0xc00)
+#define ErrorBase_DMA                            (0xc20)
+#define ErrorBase_ARM                            (0xc40)
+#define ErrorNumber_HardwareBadReason            0xc60
+#define ErrorString_HardwareBadReason            "HWBadReason:Bad OS_Hardware reason code"
+#define ErrorNumber_HardwareBadEntry             0xc61
+#define ErrorString_HardwareBadEntry             "HWBadEntry:Hardware call not available"
+#define ErrorNumber_HardwareDepends              0xc62
+#define ErrorString_HardwareDepends              "HWDep:Hardware dependency not met"
+#define ErrorNumber_FileTooBig                   0x10300
+#define ErrorString_FileTooBig                   "File too big for device(s)"
+#define ErrorNumber_OffsetTooBig                 0x10301
+#define ErrorString_OffsetTooBig                 "Offset too big for device"
+#define ErrorNumber_IsAROMFSDirectory            0x103A8
+#define ErrorString_IsAROMFSDirectory            ErrorString_IsADirectory
+#define ErrorNumber_OutsideROMFSFile             0x103B7
+#define ErrorString_OutsideROMFSFile             ErrorString_OutsideFile
+#define ErrorNumber_ROMFSFileAlreadyOpen         0x103C0
+#define ErrorString_ROMFSFileAlreadyOpen         "Only one file open at a time"
+#define ErrorNumber_BadROMFSOption               0x103CB
+#define ErrorString_BadROMFSOption               "Bad option value"
+#define ErrorNumber_ROMFSFileNotFound            0x103D6
+#define ErrorString_ROMFSFileNotFound            ErrorString_FileNotFound
+#define ErrorNumber_BadROMFSHandle               0x103DE
+#define ErrorString_BadROMFSHandle               "Bad handle"
+#define ErrorBase_NetFS                          (0x00010000 + (fsnumber_net << 8))
+#define ErrorNumber_BadName                      (ErrorBase_NetFS + 0x0)
+#define ErrorString_BadName                      "Bad file server name"
+#define ErrorNumber_BadCommandCode               (ErrorBase_NetFS + 0x1)
+#define ErrorString_BadCommandCode               "Bad file server command code"
+#define ErrorNumber_UnexpectedCommandCode        (ErrorBase_NetFS + 0x2)
+#define ErrorString_UnexpectedCommandCode        "Unexpected file server command code"
+#define ErrorNumber_UnknownFunctionCode          (ErrorBase_NetFS + 0x3)
+#define ErrorString_UnknownFunctionCode          "Unknown function code"
+#define ErrorNumber_UnknownStationName           (ErrorBase_NetFS + 0x4)
+#define ErrorString_UnknownStationName           "Unknown station name"
+#define ErrorNumber_UnknownStationNumber         (ErrorBase_NetFS + 0x5)
+#define ErrorString_UnknownStationNumber         "Unknown station number"
+#define ErrorNumber_StationNotFound              (ErrorBase_NetFS + 0x6)
+#define ErrorString_StationNotFound              "Station name not found"
+#define ErrorNumber_FileServerNameTooLong        (ErrorBase_NetFS + 0x7)
+#define ErrorString_FileServerNameTooLong        "File server name too long"
+#define ErrorNumber_BadFileServerDate            (ErrorBase_NetFS + 0x8)
+#define ErrorString_BadFileServerDate            "Bad date"
+#define ErrorNumber_NetFSInternalError           (ErrorBase_NetFS + 0x9)
+#define ErrorString_NetFSInternalError           "Fatal internal error"
+#define ErrorNumber_FileServerNotCapable         (ErrorBase_NetFS + 0xa)
+#define ErrorString_FileServerNotCapable         "Not possible on this file server"
+#define ErrorNumber_BroadcastServerDead          (ErrorBase_NetFS + 0xb)
+#define ErrorString_BroadcastServerDead          "Broadcast server not responding"
+#define ErrorNumber_FileServerOnly24Bit          (ErrorBase_NetFS + 0xc)
+#define ErrorString_FileServerOnly24Bit          "File too big"
+#define ErrorNumber_NetUtilsWrongVersion         (((ErrorBase_NetFS)  + 0x3A) + 0x0)
+#define ErrorString_NetUtilsWrongVersion         "NetFS isn't version 5.78"
+#define ErrorNumber_NetUtilsNetFSNoGo            (((ErrorBase_NetFS)  + 0x3A) + 0x1)
+#define ErrorString_NetUtilsNetFSNoGo            "NetFS isn't running as a filing system"
+#define ErrorNumber_NetUtilsIsThreaded           (((ErrorBase_NetFS)  + 0x3A) + 0x2)
+#define ErrorString_NetUtilsIsThreaded           "You can't kill NetUtils"
+#define ErrorNumber_SetFreeSyntax                ErrorNumber_Syntax
+#define ErrorString_SetFreeSyntax                "Syntax: *SetFree <Username> <FreeSpace (in hex)>"
+#define ErrorNumber_FSCLISyntax                  ErrorNumber_Syntax
+#define ErrorString_FSCLISyntax                  "Syntax: *FSCLI <string>"
+#define ErrorNumber_IsANetFSDirectory            ErrorBase_NetFS
+#define ErrorString_IsANetFSDirectory            ErrorString_IsADirectory
+#define ErrorNumber_NetFSTypesDontMatch          ErrorBase_NetFS
+#define ErrorString_NetFSTypesDontMatch          ErrorString_TypesDontMatch
+#define ErrorNumber_BadNetRename                 ErrorBase_NetFS
+#define ErrorString_BadNetRename                 ErrorString_BadRename
+#define ErrorNumber_DirectoryNotEmpty            ErrorBase_NetFS
+#define ErrorString_DirectoryNotEmpty            "Directory not empty"
+#define ErrorNumber_InsufficientNetFSAccess      ErrorBase_NetFS
+#define ErrorString_InsufficientNetFSAccess      "Insufficient access"
+#define ErrorNumber_NotLoggedOn                  ErrorBase_NetFS
+#define ErrorString_NotLoggedOn                  "Not logged on"
+#define ErrorNumber_BadNetFSOption               ErrorBase_NetFS
+#define ErrorString_BadNetFSOption               "Bad option value"
+#define ErrorNumber_BadNetFSFilename             ErrorBase_NetFS
+#define ErrorString_BadNetFSFilename             ErrorString_BadFileName
+#define ErrorNumber_DiscAndFileServerDontMatch   ErrorBase_NetFS
+#define ErrorString_DiscAndFileServerDontMatch   "Specified disc not on specified file server"
+#define ErrorNumber_NetFSFileNotFound            ErrorBase_NetFS
+#define ErrorString_NetFSFileNotFound            ErrorString_FileNotFound
+#define ErrorNumber_BadNetFSHandle               ErrorBase_NetFS
+#define ErrorString_BadNetFSHandle               "Bad handle"
+#define ErrorNumber_BadFSCLICommand              ErrorBase_NetFS
+#define ErrorString_BadFSCLICommand              "Unknown file server command"
+#define ErrorNumber_PrinterServerNameTooLong     0x10c00
+#define ErrorString_PrinterServerNameTooLong     "Printer name too long"
+#define ErrorNumber_SingleStream                 0x10c01
+#define ErrorString_SingleStream                 "Printer in use"
+#define ErrorNumber_AllPrintersBusy              0x10c02
+#define ErrorString_AllPrintersBusy              "No free printer of this type"
+#define ErrorNumber_AllPrintersBusyPre1          ErrorNumber_AllPrintersBusy
+#define ErrorString_AllPrintersBusyPre1          "Printer '"
+#define ErrorNumber_AllPrintersBusyPre2          ErrorNumber_AllPrintersBusy
+#define ErrorString_AllPrintersBusyPre2          "All '"
+#define ErrorNumber_AllPrintersBusyMid           ErrorNumber_AllPrintersBusy
+#define ErrorString_AllPrintersBusyMid           "' ("
+#define ErrorNumber_AllPrintersBusyPost1         ErrorNumber_AllPrintersBusy
+#define ErrorString_AllPrintersBusyPost1         ") "
+#define ErrorNumber_AllPrintersBusyPost2         ErrorNumber_AllPrintersBusy
+#define ErrorString_AllPrintersBusyPost2         "' not found"
+#define ErrorNumber_AllPrintersBusyPost3         ErrorNumber_AllPrintersBusy
+#define ErrorString_AllPrintersBusyPost3         "' printers busy"
+#define ErrorNumber_NetPrinterOffLine            0x10c03
+#define ErrorString_NetPrinterOffLine            "Printer offline"
+#define ErrorNumber_NetPrinterNotFound           0x10c04
+#define ErrorString_NetPrinterNotFound           "Printer server not found"
+#define ErrorNumber_NetPrintInternalError        0x10c05
+#define ErrorString_NetPrintInternalError        "Fatal internal error"
+#define ErrorNumber_NetOldServer                 0x10c06
+#define ErrorString_NetOldServer                 "Can't print to an old server when running a new one"
+#define ErrorNumber_NetPrinterBusy               0x10CA6
+#define ErrorString_NetPrinterBusy               "Printer busy"
+#define ErrorNumber_NetPrinterJammed             0x10CA7
+#define ErrorString_NetPrinterJammed             "Printer jammed"
+#define ErrorNumber_BadNetPrintHandle            0x10C00
+#define ErrorString_BadNetPrintHandle            "Bad handle"
+#define ErrorNumber_BadNullOp                    0x10d00
+#define ErrorString_BadNullOp                    "Bad operation on null:"
+#define ErrorNumber_BadPrinterOp                 0x10e00
+#define ErrorString_BadPrinterOp                 "Bad operation on printer:"
+#define ErrorNumber_PrinterInUse                 0x10e01
+#define ErrorString_PrinterInUse                 "printer: in use"
+#define ErrorNumber_UKPrinterType                0x10e02
+#define ErrorString_UKPrinterType                "Unknown printer type"
+#define ErrorNumber_BadSerialOp                  0x10f00
+#define ErrorString_BadSerialOp                  "Bad operation on serial:"
+#define ErrorNumber_SerialInUse                  0x10f01
+#define ErrorString_SerialInUse                  "serial: in use"
+#define ErrorNumber_BadVduOp                     0x11100
+#define ErrorString_BadVduOp                     "Bad operation on vdu:"
+#define ErrorNumber_BadRawVduOp                  0x11200
+#define ErrorString_BadRawVduOp                  "Bad operation on rawvdu:"
+#define ErrorNumber_BadKbdOp                     0x11300
+#define ErrorString_BadKbdOp                     "Bad operation on kbd:"
+#define ErrorNumber_BadRawKbdOp                  0x11400
+#define ErrorString_BadRawKbdOp                  "Bad operation on rawkbd:"
+#define ErrorNumber_DeskNotSupported             ((0x10000 + ((fsnumber_deskfs) << 8) + ErrorNumber_NotSupported_Pre))
+#define ErrorString_DeskNotSupported             ErrorString_NotSupported_Pre "DeskFS" ErrorString_NotSupported_Post
+#define ErrorNumber_DeskFSReadOnly               ((0x10000 + ((fsnumber_deskfs) << 8) + ErrorNumber_FSReadOnly_Pre))
+#define ErrorString_DeskFSReadOnly               ErrorString_FSReadOnly_Pre "DeskFS" ErrorString_FSReadOnly_Post
+#define ErrorNumber_NFS_malloc_failed            0x12100
+#define ErrorString_NFS_malloc_failed            "Not enough free memory"
+#define ErrorNumber_NFS_no_nameing_host          0x12101
+#define ErrorString_NFS_no_nameing_host          "Nameing server not specified"
+#define ErrorNumber_NFS_path_no_mount            0x12102
+#define ErrorString_NFS_path_no_mount            "No mount name given for mounting"
+#define ErrorNumber_NFS_mount_no_path            0x12103
+#define ErrorString_NFS_mount_no_path            "No mount path given for mounting"
+#define ErrorNumber_NFS_no_mounting_host         0x12104
+#define ErrorString_NFS_no_mounting_host         "File server not specified"
+#define ErrorNumber_NFS_no_user                  0x12105
+#define ErrorString_NFS_no_user                  "There is no user specified - this is an internal inconsistency"
+#define ErrorNumber_NFS_duplicate_mount_point    0x12106
+#define ErrorString_NFS_duplicate_mount_point    "Remounting on a given mount name is not allowed - dismount first"
+#define ErrorNumber_NFS_no_host_found            0x12107
+#define ErrorString_NFS_no_host_found            "Host unknown to RISC OS NFS"
+#define ErrorNumber_NFS_no_mount_point_found     0x12108
+#define ErrorString_NFS_no_mount_point_found     "Nothing is mounted under that name"
+#define ErrorNumber_NFS_no_library               0x12109
+#define ErrorString_NFS_no_library               "No library directory selected"
+#define ErrorNumber_NFS_no_previous              0x1210a
+#define ErrorString_NFS_no_previous              "No previous directory"
+#define ErrorNumber_NFS_no_urd                   0x1210b
+#define ErrorString_NFS_no_urd                   "No user root directory selected"
+#define ErrorNumber_NFS_no_current_directory     0x1210c
+#define ErrorString_NFS_no_current_directory     "No current directory"
+#define ErrorNumber_NFS_no_current_mount_point   0x1210d
+#define ErrorString_NFS_no_current_mount_point   "No current mount point"
+#define ErrorNumber_NFS_nfserr_io                0x1210e
+#define ErrorString_NFS_nfserr_io                "Hardware I/O error"
+#define ErrorNumber_NFS_nfserr_stale             0x1210f
+#define ErrorString_NFS_nfserr_stale             "Object no longer exists"
+#define ErrorNumber_NFS_nfserr_wflush            0x12110
+#define ErrorString_NFS_nfserr_wflush            "Write cache flushed to disc"
+#define ErrorNumber_NFS_nfserr_unknown           0x12111
+#define ErrorString_NFS_nfserr_unknown           "Unknown NFS error encountered"
+#define ErrorNumber_NFS_rpc_failed               0x12112
+#define ErrorString_NFS_rpc_failed               "RPC communication failed"
+#define ErrorNumber_NFS_read_direntry_too_soon   0x12113
+#define ErrorString_NFS_read_direntry_too_soon   "Internal error - tried to read directory entry before it was obtained from server"
+#define ErrorNumber_NFS_directory_unset          0x12114
+#define ErrorString_NFS_directory_unset          "Directory unset"
+#define ErrorNumber_NFS_no_opts_for_nfs          0x12115
+#define ErrorString_NFS_no_opts_for_nfs          "NFS does not have any *OPT options"
+#define ErrorNumber_NFS_func18_not_supported     0x12116
+#define ErrorString_NFS_func18_not_supported     "Internal error - NFS does not support FSEntry_Func 18"
+#define ErrorNumber_NFS_func20_not_supported     0x12117
+#define ErrorString_NFS_func20_not_supported     "Internal error - NFS does not support FSEntry_Func 20"
+#define ErrorNumber_NFS_flush_not_supported      0x12118
+#define ErrorString_NFS_flush_not_supported      "Flush command fed through to NFS - NFS does not support flushing"
+#define ErrorNumber_NFS_swi_mount_invalid_parameters 0x12119
+#define ErrorString_NFS_swi_mount_invalid_parameters "Invalid parameters passed to swi NFS_Mount"
+#define ErrorNumber_NFS_swi_dismount_ambiguous_parameters 0x1211a
+#define ErrorString_NFS_swi_dismount_ambiguous_parameters "Ambiguous parameters passed to swi NFS_Dismount"
+#define ErrorNumber_NFS_authorisation_failed     0x1211b
+#define ErrorString_NFS_authorisation_failed     "Authorisation failed"
+#define ErrorNumber_NFS_nfserr_BadParameters     0x1211c
+#define ErrorString_NFS_nfserr_BadParameters     "Bad parameters passed internally"
+#define ErrorNumber_NFS_mounterr_unknown         0x1211d
+#define ErrorString_NFS_mounterr_unknown         "Unknown mount error encountered"
+#define ErrorNumber_NFS_nfserr_rofs              0x01214c
+#define ErrorString_NFS_nfserr_rofs              "Read only filing system"
+#define ErrorNumber_NFS_nfserr_nxio              0x0121ac
+#define ErrorString_NFS_nfserr_nxio              "No such device or address"
+#define ErrorNumber_NFS_not_a_file               0x012100
+#define ErrorString_NFS_not_a_file               "Object is not a file"
+#define ErrorNumber_NFS_nfserr_nodev             0x0121ac
+#define ErrorString_NFS_nfserr_nodev             "No such device"
+#define ErrorNumber_NFS_BadRENAME                0x0121b0
+#define ErrorString_NFS_BadRENAME                "Bad RENAME"
+#define ErrorNumber_NFS_nfserr_notempty          0x0121b4
+#define ErrorString_NFS_nfserr_notempty          "Directory not empty"
+#define ErrorNumber_NFS_outside_file             0x012100
+#define ErrorString_NFS_outside_file             "Outside File"
+#define ErrorNumber_NFS_nfserr_perm              0x0121bd
+#define ErrorString_NFS_nfserr_perm              "Not owner - permission denied"
+#define ErrorNumber_NFS_nfserr_acces             0x0121bd
+#define ErrorString_NFS_nfserr_acces             "Insufficient access"
+#define ErrorNumber_NFS_nfserr_exist             0x0121c4
+#define ErrorString_NFS_nfserr_exist             "File already exists"
+#define ErrorNumber_NFS_nfserr_notdir            0x0121c5
+#define ErrorString_NFS_nfserr_notdir            "Not a directory"
+#define ErrorNumber_NFS_nfserr_isdir             0x0121c5
+#define ErrorString_NFS_nfserr_isdir             "Is a directory"
+#define ErrorNumber_NFS_nfserr_fbig              0x0121c6
+#define ErrorString_NFS_nfserr_fbig              "File too big"
+#define ErrorNumber_NFS_nfserr_nospc             0x0121c6
+#define ErrorString_NFS_nfserr_nospc             "No space left"
+#define ErrorNumber_NFS_nfserr_dquot             0x0121c6
+#define ErrorString_NFS_nfserr_dquot             "Disc quota exceeded"
+#define ErrorNumber_NFS_nfserr_nametoolong       0x0121cc
+#define ErrorString_NFS_nfserr_nametoolong       "Name too long"
+#define ErrorNumber_NFS_nfserr_noent             0x0121d6
+#define ErrorString_NFS_nfserr_noent             "Does not exist"
+#define ErrorBase_Loader                         (0x00010000 + (fsnumber_loader << 8))
+#define ErrorNumber_LoaderNotSupported           ((0x10000 + ((fsnumber_loader) << 8) + ErrorNumber_NotSupported_Pre))
+#define ErrorString_LoaderNotSupported           ErrorString_NotSupported_Pre "BroadcastLoaderUtils" ErrorString_NotSupported_Post
+#define ErrorNumber_LoaderFSReadOnly             ((0x10000 + ((fsnumber_loader) << 8) + ErrorNumber_FSReadOnly_Pre))
+#define ErrorString_LoaderFSReadOnly             ErrorString_FSReadOnly_Pre "BroadcastLoaderUtils" ErrorString_FSReadOnly_Post
+#define ErrorBase_ResourceFS                     (0x00010000 + (fsnumber_resourcefs << 8))
+#define ErrorNumber_ResourceFS_NotSupported      ((0x10000 + ((fsnumber_resourcefs) << 8) + ErrorNumber_NotSupported_Pre))
+#define ErrorString_ResourceFS_NotSupported      ErrorString_NotSupported_Pre "Resources" ErrorString_NotSupported_Post
+#define ErrorNumber_ResourceFS_FSReadOnly        ((0x10000 + ((fsnumber_resourcefs) << 8) + ErrorNumber_FSReadOnly_Pre))
+#define ErrorString_ResourceFS_FSReadOnly        ErrorString_FSReadOnly_Pre "Resources" ErrorString_FSReadOnly_Post
+#define ErrorNumber_RFSReg                       (ErrorBase_ResourceFS + 0x0)
+#define ErrorString_RFSReg                       "ResourceFS files already registered"
+#define ErrorNumber_RFSDreg                      (ErrorBase_ResourceFS + 0x1)
+#define ErrorString_RFSDreg                      "ResourceFS files not registered"
+#define ErrorBase_PipeFS                         (0x00010000 + (fsnumber_pipefs << 8))
+#define ErrorNumber_PipeFS_NoBlocking            (ErrorBase_PipeFS + 0x0)
+#define ErrorString_PipeFS_NoBlocking            "Pipe filing system requires TaskWindow support"
+#define ErrorNumber_PipeFS_FileOpen              ErrorBase_PipeFS
+#define ErrorString_PipeFS_FileOpen              "Pipe open"
+#define ErrorNumber_PipeFS_FileNotFound          ErrorBase_PipeFS
+#define ErrorString_PipeFS_FileNotFound          "Pipe not found"
+#define ErrorNumber_PipeFS_Channel               ErrorBase_PipeFS
+#define ErrorString_PipeFS_Channel               ErrorString_Channel
+#define ErrorNumber_PipeFS_NotSupported          ((0x10000 + ((fsnumber_pipefs) << 8) + ErrorNumber_NotSupported_Pre))
+#define ErrorString_PipeFS_NotSupported          ErrorString_NotSupported_Pre "Pipe" ErrorString_NotSupported_Post
+#define ErrorBase_DeviceFS                       ((((0x00010000) + (fsnumber_DeviceFS << 8))) + 0x0)
+#define ErrorBase_Parallel                       ((((0x00010000) + (fsnumber_DeviceFS << 8))) + 0x40)
+#define ErrorBase_Serial                         ((((0x00010000) + (fsnumber_DeviceFS << 8))) + 0x80)
+#define ErrorBase_SerialUtils                    ((((0x00010000) + (fsnumber_DeviceFS << 8))) + 0xa0)
+#define ErrorBase_SDFS                           (0x00010000 + (fsnumber_SDFS << 8))
+#define ErrorNumber_BadSoundParameter            0x20000
+#define ErrorString_BadSoundParameter            "Bad sound command parameter"
+#define ErrorNumber_BadSoundChannel              0x20001
+#define ErrorString_BadSoundChannel              "Bad sound channel number"
+#define ErrorNumber_BadSoundStereo               0x20002
+#define ErrorString_BadSoundStereo               "Bad sound stereo position"
+#define ErrorNumber_BadSoundIRQClaim             0x20003
+#define ErrorString_BadSoundIRQClaim             "Sound Level0 failed to claim IRQ vector"
+#define ErrorNumber_BadSound1Init                0x20004
+#define ErrorString_BadSound1Init                "Unable to claim sufficient Sound Level 1 heap space"
+#define ErrorNumber_BadSoundVoice                0x20005
+#define ErrorString_BadSoundVoice                "Bad sound voice"
+#define ErrorNumber_BadSound2Init                0x20006
+#define ErrorString_BadSound2Init                "Unable to claim sufficient Sound Level 2 heap space"
+#define ErrorNumber_BadVoiceInit                 0x20007
+#define ErrorString_BadVoiceInit                 "Unable to claim sufficient Sound Voice heap space"
+#define ErrorNumber_IllegalVoice                 0x20008
+#define ErrorString_IllegalVoice                 "Illegal voice index"
+#define ErrorNumber_BadSoundGain                 0x20009
+#define ErrorString_BadSoundGain                 "Gain value must be in the range 0-7"
+#define ErrorNumber_NoSoundDevices               0x2000a
+#define ErrorString_NoSoundDevices               "No sound controller devices found"
+#define ErrorNumber_AutoTuningUnavailable        0x2000b
+#define ErrorString_AutoTuningUnavailable        "Automatic tuning unavailable"
+#define ErrorNumber_BadSoundDevice               0x2000c
+#define ErrorString_BadSoundDevice               "Sound controller device initialisation failed"
+#define ErrorNumber_SoundDevNotFound             0x2000d
+#define ErrorString_SoundDevNotFound             "Sound device not found"
+#define ErrorNumber_SCSI_FailClaim               0x20100
+#define ErrorString_SCSI_FailClaim               "SCSI failed to allocate required RAM at initialise"
+#define ErrorNumber_SCSI_IDLost                  0x20101
+#define ErrorString_SCSI_IDLost                  "The SBIC has lost it's SCSI ID"
+#define ErrorNumber_SCSI_SBICBusy                0x20102
+#define ErrorString_SCSI_SBICBusy                "The SBIC is busy performing a command"
+#define ErrorNumber_SCSI_PanicMess               0x20103
+#define ErrorString_SCSI_PanicMess               "Panic - the SBIC has lost track of things"
+#define ErrorNumber_SCSI_CheckAux                0x20104
+#define ErrorString_SCSI_CheckAux                "Check Aux register"
+#define ErrorNumber_SCSI_MegaText                0x20105
+#define ErrorString_SCSI_MegaText                "An error or situation that is undefined has occurred"
+#define ErrorNumber_Video_FailClaim              0x20200
+#define ErrorString_Video_FailClaim              "Video failed to claim its workspace"
+#define ErrorNumber_Video_BadVpError             0x20201
+#define ErrorString_Video_BadVpError             "Parameter to VP must be 1 to 5 or X"
+#define ErrorNumber_Video_BadFcodeError          0x20202
+#define ErrorString_Video_BadFcodeError          "Bad f-code"
+#define ErrorNumber_Video_BadSpeedError          0x20203
+#define ErrorString_Video_BadSpeedError          "Bad speed parameter"
+#define ErrorNumber_IIC_NoAcknowledge            0x20300
+#define ErrorString_IIC_NoAcknowledge            "No acknowledge from IIC device"
+#define ErrorNumber_IIC_Error                    0x20301
+#define ErrorString_IIC_Error                    "IIC error"
+#define ErrorNumber_IIC_Busy                     0x20302
+#define ErrorString_IIC_Busy                     "IIC system busy"
+#define ErrorNumber_MIDI_BadParameter            0x20400
+#define ErrorString_MIDI_BadParameter            "Bad MIDI command parameter"
+#define ErrorNumber_MIDI_TxBufferFull            0x20401
+#define ErrorString_MIDI_TxBufferFull            "MIDI Transmit buffer is full."
+#define ErrorNumber_MIDI_RxFramingError          0x20402
+#define ErrorString_MIDI_RxFramingError          "MIDI Framing error when byte was received"
+#define ErrorNumber_MIDI_RxOverrunError          0x20403
+#define ErrorString_MIDI_RxOverrunError          "MIDI Overrun error when byte was received"
+#define ErrorNumber_MIDI_RxBufferOverflowError   0x20404
+#define ErrorString_MIDI_RxBufferOverflowError   "MIDI receive buffer overflowed"
+#define ErrorBase_PCEmulator                     (0x20500)
+#define ErrorBase_AcornDDE                       (0x20600)
+#define ErrorBase_BufferManager                  (0x20700)
+#define ErrorBase_AcornGoldOS                    (0x20800)
+#define ErrorBase_CharFile                       (0x20900)
+#define ErrorBase_SpriteFile                     (0x20a00)
+#define ErrorBase_TextFile                       (0x20b00)
+#define ErrorBase_DrawFile                       (0x20c00)
+#define ErrorBase_ColourPicker                   (0x20d00)
+#define ErrorBase_DCI4                           (0x20e00)
+#define ErrorBase_Joystick                       (0x43f40)
+#define ErrorBase_ANT                            (0x4a580)
+#define ErrorBase_MachineExceptions              (0x80000000)
+#define ErrorBase_CoProc0                        (0x80000100)
+#define ErrorBase_FloatingPoint                  (0x80000200)
+#define ErrorBase_EconetExceptions               (0x80000300)
+#define ErrorBase_AbortRegions                   (0x80000500)
+#define ErrorBase_VectorFloatingPoint            (0x80000600)
+#define ErrorNumber_UndefinedInstruction         (ErrorBase_MachineExceptions + 0x0)
+#define ErrorString_UndefinedInstruction         "UndefinedInstruction:Undefined instruction at &%0"
+#define ErrorNumber_InstructionAbort             (ErrorBase_MachineExceptions + 0x1)
+#define ErrorString_InstructionAbort             "InstructionAbort:Abort on instruction fetch at &%0"
+#define ErrorNumber_DataAbort                    (ErrorBase_MachineExceptions + 0x2)
+#define ErrorString_DataAbort                    "DataAbort:Abort on data transfer at &%0"
+#define ErrorNumber_AddressException             (ErrorBase_MachineExceptions + 0x3)
+#define ErrorString_AddressException             "AddressException:Address exception at &%0"
+#define ErrorNumber_UnknownIRQ                   (ErrorBase_MachineExceptions + 0x4)
+#define ErrorString_UnknownIRQ                   "Unknown IRQ at &"
+#define ErrorNumber_BranchThrough0               (ErrorBase_MachineExceptions + 0x5)
+#define ErrorString_BranchThrough0               "BranchThrough0:Branch through zero at &"
+#define ErrorNumber_Remoted                      (ErrorBase_EconetExceptions + 0x0)
+#define ErrorString_Remoted                      "Remoted"
+#define ErrorBase_User                           (0x7fff00)
+#define ErrorBase_BASICEditor                    (0x800000)
+#define ErrorBase_CSharedLibrary                 (0x800e00)
+#define ErrorBase_6502Emulator                   (0x801c00)
+#define ErrorBase_AcornHWTest                    (0x805e00)
+#define ErrorBase_AcornNZ                        (0x806500)
+#define ErrorBase_AcornFaultDatabase             (0x807400)
+#define ErrorBase_ElectronicGroup                (0x807700)
+#define ErrorBase_PhotoCD                        (0x808600)
+#define ErrorBase_PCMCIADriver                   (0x808900)
+#define ErrorBase_PCMCIASupportCode              (0x808a00)
+#define ErrorBase_PCCardFS                       (0x808b00)
+#define ErrorBase_PCCardFSFiler                  (0x808c00)
+#define ErrorBase_RemotePrinterSupport           (0x809c00)
+#define ErrorBase_Sparrow                        (0x809f00)
+#define ErrorBase_AquariusToolboxTest            (0x80a800)
+#define ErrorBase_AquariusWindows                (0x80a900)
+#define ErrorBase_AquariusMenus                  (0x80aa00)
+#define ErrorBase_AquariusIconBar                (0x80ab00)
+#define ErrorBase_AquariusPointers               (0x80ac00)
+#define ErrorBase_AquariusColMenu                (0x80ad00)
+#define ErrorBase_AquariusColourDbox             (0x80ae00)
+#define ErrorBase_AquariusFontDbox               (0x80af00)
+#define ErrorBase_AquariusFontMenu               (0x80b000)
+#define ErrorBase_AquariusDCS                    (0x80b100)
+#define ErrorBase_AquariusFileInfo               (0x80b200)
+#define ErrorBase_AquariusPrintDbox              (0x80b300)
+#define ErrorBase_AquariusProgInfo               (0x80b400)
+#define ErrorBase_AquariusQuit                   (0x80b500)
+#define ErrorBase_AquariusSaveAs                 (0x80b600)
+#define ErrorBase_AquariusScale                  (0x80b700)
+#define ErrorBase_AquariusTinySupport            (0x80b800)
+#define ErrorBase_AquariusReserved02             (0x80b900)
+#define ErrorBase_AquariusReserved03             (0x80ba00)
+#define ErrorBase_AquariusReserved04             (0x80bb00)
+#define ErrorBase_AquariusReserved05             (0x80bc00)
+#define ErrorBase_AquariusReserved06             (0x80bd00)
+#define ErrorBase_AquariusReserved07             (0x80be00)
+#define ErrorBase_AquariusReserved08             (0x80bf00)
+#define ErrorBase_AquariusReserved09             (0x80c000)
+#define ErrorBase_AquariusReserved10             (0x80c100)
+#define ErrorBase_AquariusReserved11             (0x80c200)
+#define ErrorBase_AquariusReserved12             (0x80c300)
+#define ErrorBase_AquariusReserved13             (0x80c400)
+#define ErrorBase_AquariusReserved14             (0x80c500)
+#define ErrorBase_AquariusReserved15             (0x80c600)
+#define ErrorBase_AquariusReserved16             (0x80c700)
+#define ErrorBase_ToolboxCore                    (0x80cb00)
+#define ErrorBase_TimeShare                      (0x80dd00)
+#define ErrorBase_AcornPhileas                   (0x80de00)
+#define ErrorBase_PCClipboard                    (0x80e000)
+#define ErrorBase_CDManager                      (0x80e200)
+#define ErrorBase_DebugIt                        (0x80e800)
+#define ErrorBase_TypeMapper                     (0x80ec00)
+#define ErrorBase_Dialler                        (0x80f200)
+#define ErrorBase_Locator                        (0x80f400)
+#define ErrorBase_Clip                           (0x80f500)
+#define ErrorBase_CacheManager                   (0x80f700)
+#define ErrorBase_AudioManager                   (0x80fa00)
+#define ErrorBase_FileWatch                      (0x80fb00)
+#define ErrorBase_NCRegistry                     (0x80fd00)
+#define ErrorBase_NCSerial                       (0x80ff00)
+#define ErrorBase_JavaSupport                    (0x810000)
+#define ErrorBase_OVS                            (0x810300)
+#define ErrorBase_MSCP                           (0x810500)
+#define ErrorBase_Clipboard                      (0x810700)
+#define ErrorBase_Cam                            (0x810800)
+#define ErrorBase_URI                            (0x810a00)
+#define ErrorBase_SerialMapper                   (0x810b00)
+#define ErrorBase_AcornNNTP                      (0x810d00)
+#define ErrorBase_AcornSMTP                      (0x810e00)
+#define ErrorBase_AcornPOP3                      (0x810f00)
+#define ErrorBase_AcornIMAP4                     (0x811000)
+#define ErrorBase_MPEGStream                     (0x811100)
+#define ErrorBase_VideoPump                      (0x811500)
+#define ErrorBase_MPEGAudio                      (0x811700)
+#define ErrorBase_SurfBoard                      (0x811800)
+#define ErrorBase_SoundFX                        (0x811900)
+#define ErrorBase_NCAccessManager                (0x811b00)
+#define ErrorBase_GCManager                      (0x811c00)
+#define ErrorBase_JavaVM                         (0x811d00)
+#define ErrorBase_LibraryManager                 (0x811e00)
+#define ErrorBase_RCAIRBlast                     (0x811f00)
+#define ErrorBase_NCBootBlock                    (0x812200)
+#define ErrorBase_SerialFlash                    (0x812500)
+#define ErrorBase_Authenticate                   (0x812600)
+#define ErrorBase_tftp                           (0x812700)
+#define ErrorBase_SoundCtrl                      (0x813100)
+#define ErrorBase_IME                            (0x813200)
+#define ErrorBase_PCI                            (0x813300)
+#define ErrorBase_FaxSupport                     (0x813400)
+#define ErrorBase_SoundTfr                       (0x813600)
+#define ErrorBase_Diallerb                       (0x813900)
+#define ErrorBase_DaytonaHW                      (0x813c00)
+#define ErrorBase_IODevices                      (0x813d00)
+#define ErrorBase_AcornURL                       (0x813f00)
+#define ErrorBase_MIDIMgr                        (0x814700)
+#define ErrorBase_MIDIClk                        (0x814800)
+#define ErrorBase_Installer                      (0x814f00)
+#define ErrorBase_MPU401                         (0x815400)
+#define ErrorBase_DAHeap                         (0x815500)
+#define ErrorBase_FlashWrite                     (0x815a00)
+#define ErrorBase_RC5PC                          (0x815c00)
+#define ErrorBase_VSP                            (0x815d00)
+#define ErrorBase_NCKeyboard                     (0x816100)
+#define ErrorBase_MessageQueue                   (0x816200)
+#define ErrorBase_AudioDeviceDriver              (0x816300)
+#define ErrorBase_ATM25                          (0x816600)
+#define ErrorBase_Net2TransStream                (0x816700)
+#define ErrorBase_PortMan                        (0x816900)
+#define ErrorBase_TrapError                      (0x816a00)
+#define ErrorBase_DHCP                           (0x816c00)
+#define ErrorBase_FlashProgrammer                (0x816d00)
+#define ErrorBase_TFTP                           (0x817100)
+#define ErrorBase_SVBmip                         (0x817300)
+#define ErrorBase_VideoControl1                  (0x817600)
+#define ErrorBase_VideoControl2                  (0x817700)
+#define ErrorBase_EngMenu                        (0x817b00)
+#define ErrorBase_MediaCtrl                      (0x817c00)
+#define ErrorBase_SVBGeneric                     (0x817e00)
+#define ErrorBase_MPEG                           (0x818500)
+#define ErrorBase_CheckURL                       (0x818600)
+#define ErrorBase_Castle1                        (0x818a00)
+#define ErrorBase_LDAP                           (0x818e00)
+#define ErrorBase_UserInactivity                 (0x818f00)
+#define ErrorBase_USBDriver                      (0x819000)
+#define ErrorBase_NVRAM                          (0x819200)
+#define ErrorBase_ELF                            (0x819400)
+#define ErrorBase_PRISM                          (0x819800)
+#define ErrorBase_DebugTools                     (0x819c00)
+#define ErrorBase_ConfigUpdate                   (0x819d00)
+#define ErrorBase_Prism                          (0x819e00)
+#define ErrorBase_MP3Stream                      (0x81a100)
+#define ErrorBase_SendMessage                    (0x81a200)
+#define ErrorBase_RT                             (0x81bd00)
+#define ErrorBase_Tematic1                       (0x81d900)
+#define ErrorBase_SysLoad                        (0x81de00)
+#define ErrorBase_SDIO                           (0x81ee00)
+#define ErrorBase_BootFX                         (0x81ef00)
+#define ErrorBase_ZLib                           (0x81f000)
+#define ErrorBase_VFPSupport                     (0x81f100)
+#define ErrorBase_BCMSupport                     (0x81f200)
+#define ErrorBase_BootCommands                   (0x81f300)
+#define ErrorBase_Switcher                       (0x81f400)
+#define ErrorBase_VCHIQ                          (0x81f500)
+#define ErrorBase_DeskRecord                     (0x81f800)
+#define ErrorBase_USBAudio                       (0x81f900)
+#define ErrorBase_RTC                            (0x81fa00)
+#define ErrorBase_BASIC                          (0x81fb00)
+#define ErrorBase_ATA                            (0x820500)
+#define ErrorBase_SPIDriver                      (0x820600)
+#define ErrorBase_SerialUSB                      (0x820800)
+#endif

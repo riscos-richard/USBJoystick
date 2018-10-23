@@ -1,0 +1,21 @@
+
+| Kill it if it's loaded
+SetEval USBJoystick$Loaded 1
+RMEnsure USBJoystick 0.00 SetEval USBJoystick$Loaded 0
+If <USBJoystick$Loaded> Then RMKill USBJoystick
+Unset USBJoystick$Loaded
+
+| Load it again
+RMLoad <Obey$Dir>.^.rm.USBJoystick
+
+| Configure
+
+| SEGA pad (buttons: A, B, C, X, Y, Z and START)
+|USBJoystick_Map 0 0 2 3 0 1 2 3 4 6 9
+
+| Cruiser
+|USBJoystick_Map 0 0 2 3 1
+|USBJoystick_Map 1 1 2 3 1
+
+|XBOX360 Controller
+usbjoystick_map 0 2 0 1 0 1 2 3

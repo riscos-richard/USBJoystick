@@ -1,0 +1,17 @@
+#ifndef USBSERVICE_H_INCLUDED
+#define USBSERVICE_H_INCLUDED
+
+
+#define Service_USBDriver           0xd2
+#define Service_USBDriver_Attach    0     // New device detected
+#define Service_USBDriver_Connected 1     // Report connected devices
+#define Service_USBDriver_Gone      2     // Not issued?
+#define Service_USBDriver_Starting  3     // USBDriver starting
+#define Service_USBDriver_Dying     4     // USBDriver stopping
+
+#ifndef Service_DeviceDead
+#define Service_DeviceDead          0x79
+#endif
+
+
+#endif

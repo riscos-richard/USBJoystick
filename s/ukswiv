@@ -1,0 +1,22 @@
+
+	AREA	|C$$Code|,CODE,PIC,READONLY
+	EXPORT	ukswiv_pre_hook
+	IMPORT	ukswiv_hook
+
+ukswiv_pre_hook
+	STMFD 	SP!,{R9,LR}
+	MOV 	R9,R11
+	BL 	ukswiv_hook
+	BVS	claim
+	TEQ	R9, #0
+	BEQ	pass_on
+
+claim
+	LDMFD	SP!, {R9, LR}
+	LDMFD 	R13!,{PC}
+
+pass_on
+	LDMFD	SP!, {R9, LR}
+	MOV 	PC, LR
+
+	END

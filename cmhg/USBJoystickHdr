@@ -1,0 +1,120 @@
+
+#include "VersionNum"
+#include "usbservice.h"
+#include "usbjoystick.h"
+
+title-string:USBJoystick
+
+help-string:	USBJoystick Module_MajorVersion_CMHG Module_MinorVersion_CMHG
+
+date-string:		Module_Date_CMHG
+
+initialisation-code:	module_initialise
+
+finalisation-code:	module_finalise
+
+service-call-handler: servicecall_handler	Service_USBDriver,
+						Service_DeviceDead
+
+command-keyword-table: command_handler
+     USBJoystick_Read(min-args: 1,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJRD",
+                   help-text: "HJRD"
+                   ),
+     USBJoystick_MapStick(min-args: 2,
+                   max-args: 2,
+                   international:,
+                   invalid-syntax: "SJMAPS",
+                   help-text: "HJMAPS"
+                   ),
+     USBJoystick_MapAxes8(min-args: 3,
+                   max-args: 3,
+                   international:,
+                   invalid-syntax: "SJMAPA8",
+                   help-text: "HJMAPA8"
+                   ),
+     USBJoystick_MapAxes16(min-args: 3,
+                   max-args: 3,
+                   international:,
+                   invalid-syntax: "SJMAPA16",
+                   help-text: "HJMAPA16"
+                   ),
+     USBJoystick_MapADC(min-args: 2,
+                   max-args: 7,
+                   international:,
+                   invalid-syntax: "SJMAPADC",
+                   help-text: "HJMAPADC"
+                   ),
+     USBJoystick_MapButtons(min-args: 2,
+                   max-args: 17,
+                   international:,
+                   invalid-syntax: "SJMAPB",
+                   help-text: "HJMAPB"
+                   ),
+      USBJoystick_List(min-args: 0,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJLST",
+                   help-text: "HJLST"
+                   ),
+     USBJoystick_EmulateAcorn(min-args: 0,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJEMUA",
+                   help-text: "HJEMUA"
+                   ),
+     USBJoystick_EmulateSerialPort(min-args: 0,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJEMUSP",
+                   help-text: "HJEMUSP"
+                   ),
+     USBJoystick_EmulateJoy(min-args: 0,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJEMUJOY",
+                   help-text: "HJEMUJOY"
+                   ),
+     USBJoystick_EmulateADC(min-args: 0,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJEMUADC",
+                   help-text: "HJEMUADC"
+                   ),
+     USBJoystick_Flip(min-args: 3,
+                   max-args: 3,
+                   international:,
+                   invalid-syntax: "SJFLIP",
+                   help-text: "HJFLIP"
+                   ),
+      USBJoystick_Mapped(min-args: 0,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJMAPD",
+                   help-text: "HJMAPD"
+                   ),
+      USBJoystick_Debug(min-args: 0,
+                   max-args: 1,
+                   international:,
+                   invalid-syntax: "SJDBG",
+                   help-text: "HJDBG"
+                   )
+
+swi-chunk-base-number:	USBJoystickSWI_Base
+
+swi-handler-code:	module_swi
+
+swi-decoding-table:	USBJoystickSWI_Name,
+			Read,
+			CalibrateTopRight,
+			CalibrateBottomLeft,
+			Status
+
+vector-handlers:	upcallv_hook/upcallv_hook_handler,
+			bytev_hook/bytev_hook_handler
+
+generic-veneers:	ukswiv_hook/ukswiv_hook_handler
+
+international-help-file:"Resources:$.Resources.USBJoystick.Messages"
